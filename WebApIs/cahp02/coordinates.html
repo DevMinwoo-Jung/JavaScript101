@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    height: 100px;
+    width: 100px;
+    background-color:blueviolet;
+    margin: 10px;
+  }
+  div.special {
+    background-color: red;
+  }
+</style>
+<body>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div class="special">
+
+  </div>
+  <div>
+
+  </div>
+</body>
+<script>
+  let divCoordinates = document.querySelectorAll("div");
+  let screenSizeWidth = window.screen.width;
+  let screenSizeHeight = window.screen.height;
+
+  for(divCoordinate of divCoordinates){
+    divCoordinate.addEventListener('click', () => {
+    console.log(event.pageY);
+    console.log(event.pageX);
+    console.log(event.offsetY);
+    console.log(event.offsetX);
+    console.log(event.clientY);
+    console.log(event.clientX);
+
+    
+    
+    
+  });
+  }
+
+</script>
+</html>
