@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+}
+
+.line {
+  color: white;
+}
+
+.box {
+  position: absolute;
+  left: -55px;
+  top: -55px;
+}
+
+/* .box hr {
+  size: 1;
+  color: white;
+  position: absolute;
+} */
+
+.vertical {
+  border-left: solid white;
+  position: absolute;
+}

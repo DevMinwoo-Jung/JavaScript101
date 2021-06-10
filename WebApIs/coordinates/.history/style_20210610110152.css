@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+
+.line {
+  color: white;
+}
+
+.box {
+  position: relative;
+}
+
+.vertical {
+  border: solid white;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+}
+
+.levelLine {
+  border: solid white;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+}
+
+p.location {
+  color: white;
+}
+
+.imgSize {
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+}
+
+.line {
+  color: white;
+}
+
+.box {
+  position: relative;
+}
+
+.vertical {
+  border: solid white;
+  position: absolute;
+}
+
+.vertical {
+  border: solid white;
+  position: absolute;
+}
+
+p.location {
+  color: white;
+}
+
+.imgSize {
+  left: -55px;
+  top: -55px;
+}

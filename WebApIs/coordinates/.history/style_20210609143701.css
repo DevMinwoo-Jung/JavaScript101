@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+}
+
+.line {
+  color: white;
+}
+
+.box {
+  top: 200px;
+  left: 500px;
+  background-color: white;
+  position: absolute;
+}

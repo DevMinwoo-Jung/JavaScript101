@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+.line {
+  color: white;
+}
+
+.box {
+  position: relative;
+  left: -55px;
+  top: -55px;
+}
+
+.vertical {
+  border-left: solid white;
+  position: absolute;
+}
