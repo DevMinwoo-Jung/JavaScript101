@@ -1,0 +1,12 @@
+.list__div {
+  margin: auto;
+  display: block;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border: solid;
+}
+
+.addItem {
+  transform: translate(0, 90%);
+}

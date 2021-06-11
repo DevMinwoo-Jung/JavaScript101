@@ -1,0 +1,29 @@
+.list__div {
+  margin: auto;
+  display: block;
+  width: 50%;
+  height: 90vh;
+  text-align: center;
+  border: solid;
+  position: relative;
+}
+
+.list__div__top {
+  text-align: center;
+}
+
+.addItem {
+}
+
+.button__div {
+  height: 0;
+}
+
+input {
+  width: 100%;
+}
+
+.input__box {
+  width: 100%;
+  padding: 0px 0px;
+}

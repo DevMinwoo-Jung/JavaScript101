@@ -1,0 +1,21 @@
+.list__div {
+  margin: auto;
+  display: block;
+  width: 50%;
+  height: 90vh;
+  text-align: center;
+  border: solid;
+  position: relative;
+}
+
+.list__div__top {
+  text-align: center;
+}
+
+.addItem {
+}
+
+.button__div {
+  bottom: 5px;
+  position: absolute;
+}
