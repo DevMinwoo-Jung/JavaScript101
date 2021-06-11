@@ -2,9 +2,6 @@ const imgSize = document.querySelector('.imgSize');
 const verticalLine = document.querySelector('.vertical');
 const levelLine = document.querySelector('.levelLine');
 const targetLocation = document.querySelector('.location');
-const imgSizeRect = imgSize.getBoundingClientRect();
-const imgSizeWidth = imgSizeRect.width / 2;
-const imgSizeHeight = imgSizeRect.height / 2;
 
 
 document.addEventListener('mousemove', (e) => {
@@ -15,7 +12,7 @@ document.addEventListener('mousemove', (e) => {
   // 이미지 위치
   //  imgSize.style.left = `${x}px`;
   //  imgSize.style.top = `${y}px`;
-  imgSize.style.transform = `translate(${x-imgSizeWidth}px, ${y-imgSizeHeight}px)`;
+  imgSize.style.transform = `translate(${x}px, ${y}px)`;
   
   
   // 수직위치 
@@ -27,10 +24,8 @@ document.addEventListener('mousemove', (e) => {
   levelLine.style.transform = `translate(0, ${y}px)`;
   
   // 좌표 위치
-  // targetLocation.style.left = `${x}px`;
-  // targetLocation.style.top = `${y}px`;
-  targetLocation.style.transform = `translate(${x}px, ${y}px)`;
-
+  targetLocation.style.left = `${x}px`;
+  targetLocation.style.top = `${y}px`;
   targetLocation.innerHTML = `X: ${x} Y: ${y}`;
   // innerText는 구버전에서 쓰는 것 이므로 쓰지말자!
 

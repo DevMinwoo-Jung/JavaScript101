@@ -2,9 +2,6 @@ const imgSize = document.querySelector('.imgSize');
 const verticalLine = document.querySelector('.vertical');
 const levelLine = document.querySelector('.levelLine');
 const targetLocation = document.querySelector('.location');
-const imgSizeRect = imgSize.getBoundingClientRect();
-const imgSizeWidth = imgSizeRect.width / 2;
-const imgSizeHeight = imgSizeRect.height / 2;
 
 
 document.addEventListener('mousemove', (e) => {
@@ -15,12 +12,12 @@ document.addEventListener('mousemove', (e) => {
   // 이미지 위치
   //  imgSize.style.left = `${x}px`;
   //  imgSize.style.top = `${y}px`;
-  imgSize.style.transform = `translate(${x-imgSizeWidth}px, ${y-imgSizeHeight}px)`;
+  imgSize.style.transform = `translate(${x}px, ${y}px)`;
   
   
   // 수직위치 
   //verticalLine.style.left = `${x}px`;
-  verticalLine.style.transform = `translate(${x}px, 0)`;
+  verticalLine.style.translate = `translate(${x}px, 0)`;
   
   // 수평위치
   //levelLine.style.top = `${y}px`;

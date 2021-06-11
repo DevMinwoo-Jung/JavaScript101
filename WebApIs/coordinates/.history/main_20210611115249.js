@@ -15,7 +15,7 @@ document.addEventListener('mousemove', (e) => {
   // 이미지 위치
   //  imgSize.style.left = `${x}px`;
   //  imgSize.style.top = `${y}px`;
-  imgSize.style.transform = `translate(${x-imgSizeWidth}px, ${y-imgSizeHeight}px)`;
+  imgSize.style.transform = `translate(${x}px, ${y}px)`;
   
   
   // 수직위치 
@@ -29,7 +29,7 @@ document.addEventListener('mousemove', (e) => {
   // 좌표 위치
   // targetLocation.style.left = `${x}px`;
   // targetLocation.style.top = `${y}px`;
-  targetLocation.style.transform = `translate(${x}px, ${y}px)`;
+  targetLocation.style.transform = `translate(${x-imgSizeWidth}px, ${y-imgSizeHeight}px)`;
 
   targetLocation.innerHTML = `X: ${x} Y: ${y}`;
   // innerText는 구버전에서 쓰는 것 이므로 쓰지말자!

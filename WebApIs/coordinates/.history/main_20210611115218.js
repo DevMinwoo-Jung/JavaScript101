@@ -15,7 +15,7 @@ document.addEventListener('mousemove', (e) => {
   // 이미지 위치
   //  imgSize.style.left = `${x}px`;
   //  imgSize.style.top = `${y}px`;
-  imgSize.style.transform = `translate(${x-imgSizeWidth}px, ${y-imgSizeHeight}px)`;
+  imgSize.style.transform = `translate(${x}px, ${y}px)`;
   
   
   // 수직위치 

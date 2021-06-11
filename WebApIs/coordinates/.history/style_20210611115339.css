@@ -25,7 +25,7 @@ body {
 p.location {
   color: white;
   position: absolute;
-  margin: 20px;
+  /* transform: translate(20px, 20px); */
 }
 
 .imgSize {
