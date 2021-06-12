@@ -3,52 +3,43 @@
 }
 
 body {
+  background-color: violet;
 }
 
 .list__div {
   margin: auto;
   display: block;
-  height: 300px;
+  width: 50%;
+  height: 70vh;
   text-align: center;
   border: solid;
   position: relative;
-  width: 300px;
 }
 
 .list__div__top {
   text-align: center;
-  border-bottom: solid;
 }
 
-.list__div__top h2 {
-  margin: 5px;
-}
-
-.item__list {
-  height: 190px;
-}
-
-.item__list p {
-  text-align: left;
-  padding-left: 10px;
+.addItem {
 }
 
 .button__div {
   margin: auto;
   display: block;
-  width: 300px;
+  width: 50%;
+  border: solid;
   text-align: center;
 }
 
-.list__div input {
-  width: 300px;
+input {
+  width: 99%;
   padding: 0px 0px;
-  border: solid;
 }
 
 .input__box {
   margin: auto;
   display: block;
-  width: 300px;
+  width: 50%;
+  border: solid;
   text-align: center;
 }

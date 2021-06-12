@@ -24,13 +24,7 @@ body {
   margin: 5px;
 }
 
-.item__list {
-  height: 190px;
-}
-
-.item__list p {
-  text-align: left;
-  padding-left: 10px;
+.addItem {
 }
 
 .button__div {
@@ -44,6 +38,8 @@ body {
   width: 300px;
   padding: 0px 0px;
   border: solid;
+  bottom: 0px;
+  position: fixed;
 }
 
 .input__box {

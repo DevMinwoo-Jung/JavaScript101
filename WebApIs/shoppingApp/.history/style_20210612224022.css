@@ -25,12 +25,7 @@ body {
 }
 
 .item__list {
-  height: 190px;
-}
-
-.item__list p {
-  text-align: left;
-  padding-left: 10px;
+  height: 200px;
 }
 
 .button__div {
