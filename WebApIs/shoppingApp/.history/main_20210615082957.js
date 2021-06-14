@@ -2,7 +2,6 @@ const addButton = document.querySelector('.addItem');
 const inputBox = document.querySelector('.input__box');
 const inputValue = document.querySelector('.input__box');
 
-
 inputBox.addEventListener('keyup', (e) => {
   if(e.key == 'Enter'){
    addPara();
@@ -13,6 +12,7 @@ inputBox.addEventListener('keyup', (e) => {
 addButton.addEventListener('click', () => {
   addPara();
 });
+
 
 /// functions
 function addPara(){
@@ -40,12 +40,9 @@ function addPara(){
   addingP[addingP.length-1].appendChild(newIcon);
   inputValue.value = '';
 
-  const removeBtn = document.querySelectorAll('.fas ');
-  
-  for(let i=0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener('click', () => {
-      addingP[i].remove();
-    });
-  }
-
 };
+
+let removeBtn = document.querySelector('.fas ');
+removeBtn.addEventListener('click', () => {
+  console.log('asd');
+});

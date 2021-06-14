@@ -44,7 +44,7 @@ function addPara(){
   
   for(let i=0; i<removeBtn.length; i++){
     removeBtn[i].addEventListener('click', () => {
-      addingP[i].remove();
+      console.log(removeBtn[i]);
     });
   }
 

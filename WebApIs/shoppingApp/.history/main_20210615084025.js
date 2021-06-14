@@ -41,11 +41,11 @@ function addPara(){
   inputValue.value = '';
 
   const removeBtn = document.querySelectorAll('.fas ');
-  
-  for(let i=0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener('click', () => {
-      addingP[i].remove();
-    });
+  for(btn of removeBtn){
+    console.log(removeBtn);
   }
-
+  // removeBtn.addEventListener('click', () => {
+  //   console.log('a');
+  //   // addingP[addingP.length-1].remove();
+  // });
 };

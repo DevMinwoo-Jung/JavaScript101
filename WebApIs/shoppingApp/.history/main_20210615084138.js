@@ -41,10 +41,9 @@ function addPara(){
   inputValue.value = '';
 
   const removeBtn = document.querySelectorAll('.fas ');
-  
-  for(let i=0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener('click', () => {
-      addingP[i].remove();
+  for(btn of removeBtn){
+    btn.addEventListener('click', () => {
+      console.log('a');
     });
   }
 

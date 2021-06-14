@@ -14,6 +14,9 @@ addButton.addEventListener('click', () => {
   addPara();
 });
 
+
+
+
 /// functions
 function addPara(){
   const newP = document.createElement('p');
@@ -40,12 +43,9 @@ function addPara(){
   addingP[addingP.length-1].appendChild(newIcon);
   inputValue.value = '';
 
-  const removeBtn = document.querySelectorAll('.fas ');
-  
-  for(let i=0; i<removeBtn.length; i++){
-    removeBtn[i].addEventListener('click', () => {
-      addingP[i].remove();
-    });
-  }
-
 };
+
+const removeBtn = document.querySelector('.fas fa-trash');
+removeBtn.addEventListener('click', () => {
+  alert(" ㅁㄴㅇ");
+});
