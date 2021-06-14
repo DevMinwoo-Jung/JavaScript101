@@ -16,7 +16,7 @@ body {
   position: relative;
   width: 300px;
   border-radius: 10%;
-  background: linear-gradient(blue, pink, 50%, pink, blue);
+  background: linear-gradient(blue, 10%, pink, blue);
 }
 
 .list__div__top {

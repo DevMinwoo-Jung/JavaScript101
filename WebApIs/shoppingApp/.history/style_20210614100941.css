@@ -1,10 +1,9 @@
 :root {
   --topAndBottom-height: 20px;
-  --background-color: rgb(235, 232, 232);
 }
 
 body {
-  background-color: grey;
+  background-color: rgb(235, 232, 232);
 }
 
 .list__div {
@@ -16,21 +15,22 @@ body {
   position: relative;
   width: 300px;
   border-radius: 10%;
-  background: linear-gradient(blue, pink, 50%, pink, blue);
+  background: linear-gradient(blue, 10%, pink);
 }
 
 .list__div__top {
+  text-align: center;
+  border-bottom: solid;
   height: var(--topAndBottom-height);
 }
 
 .list__div__top h2 {
   margin: 5px;
-  color: white;
 }
 
 .item__list {
-  height: 210px;
-  background-color: var(--background-color);
+  height: 200px;
+  background-color: white;
 }
 
 .item__list p {
@@ -40,19 +40,22 @@ body {
   font-size: 15px;
 }
 
-.item__list__input {
-  bottom: 10px;
+.button__div {
+  margin: auto;
+  display: block;
+  width: 300px;
+  text-align: center;
 }
 
-.button__div .addItem {
-  margin-top: 15px;
-}
-
-input {
-  width: 295px;
-  border: 0px;
-  margin-top: 150px;
+.list__div input {
+  width: 300px;
+  padding: 0px 0px;
+  border: solid;
 }
 
 .input__box {
+  margin: auto;
+  display: block;
+  width: 300px;
+  text-align: center;
 }

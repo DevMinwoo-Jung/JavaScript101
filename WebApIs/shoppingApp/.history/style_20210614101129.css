@@ -1,0 +1,61 @@
+:root {
+  --topAndBottom-height: 10px;
+}
+
+body {
+  background-color: rgb(235, 232, 232);
+}
+
+.list__div {
+  margin: auto;
+  display: block;
+  height: 300px;
+  text-align: center;
+  border: solid;
+  position: relative;
+  width: 300px;
+  border-radius: 10%;
+  background: linear-gradient(blue, 10%, pink);
+}
+
+.list__div__top {
+  text-align: center;
+  height: var(--topAndBottom-height);
+}
+
+.list__div__top h2 {
+  margin: 5px;
+}
+
+.item__list {
+  height: 200px;
+  background-color: white;
+}
+
+.item__list p {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+.button__div {
+  margin: auto;
+  display: block;
+  width: 300px;
+  text-align: center;
+  height: var(--topAndBottom-height);
+}
+
+.list__div input {
+  width: 300px;
+  padding: 0px 0px;
+  border: solid;
+}
+
+.input__box {
+  margin: auto;
+  display: block;
+  width: 300px;
+  text-align: center;
+}
