@@ -34,6 +34,7 @@ body {
   overflow-y: scroll;
   margin-top: 10px;
   margin-bottom: -5px;
+  display: flex;
 }
 
 .item__list p {
@@ -44,8 +45,8 @@ body {
 }
 
 .fas.fa-trash {
-  padding-top: 15px;
-  padding-left: 200px;
+  text-align: right;
+  padding-top: 20px;
 }
 
 .item__list__input {

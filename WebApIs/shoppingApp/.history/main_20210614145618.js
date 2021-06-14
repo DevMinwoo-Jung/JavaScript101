@@ -24,6 +24,10 @@ function addPara(){
   currentP.appendChild(newP);
   newP.textContent = inputValue.value;
   let addingP = document.querySelectorAll('.item__list p');
+  // for(addingPs of addingP){
+  //   console.log(addingP);
+  // };
+  console.log(addingP.length - 1);
   addingP[addingP.length-1].appendChild(newIcon);
   inputValue.value = '';
 };

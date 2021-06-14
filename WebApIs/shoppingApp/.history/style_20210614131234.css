@@ -39,13 +39,9 @@ body {
 .item__list p {
   text-align: left;
   padding-left: 10px;
+  padding-top: 10px;
   font-size: 15px;
   margin-bottom: 5px;
-}
-
-.fas.fa-trash {
-  padding-top: 15px;
-  padding-left: 200px;
 }
 
 .item__list__input {

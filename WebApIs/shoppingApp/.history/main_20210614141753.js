@@ -11,19 +11,25 @@ inputBox.addEventListener('keyup', (e) => {
 
 addButton.addEventListener('click', () => {
   addPara();
+  // console.log(inputValue.value);
+  // console.log(currentP);
+  // console.log(newP.appendChild(newContent));
+  // currentP.insertBefore(newP, currentP);
+  
 });
 
 /// functions
 function addPara(){
   const newP = document.createElement('p');
-  const newIcon = document.createElement('i');
+  let inputBox = document.querySelector('.input__box');
   const currentP = document.querySelector('.item__list');
+  console.log(typeof newContent);
+  console.log(inputValue.value);
+  console.log(inputValue);
 
-  newIcon.setAttribute('class', 'fas fa-trash');
-
-  currentP.appendChild(newP);
-  newP.textContent = inputValue.value;
-  let addingP = document.querySelectorAll('.item__list p');
-  addingP[addingP.length-1].appendChild(newIcon);
+  // newP.appendChild(newContent);
+  // currentP.appendChild(newP.append(newContent));
+  newP.textContent(inputValue.value);
+  currentP.insertBefore(newContent, inputBox);
   inputValue.value = '';
 };

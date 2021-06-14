@@ -11,8 +11,13 @@ inputBox.addEventListener('keyup', (e) => {
 
 addButton.addEventListener('click', () => {
   addPara();
+  // console.log(inputValue.value);
+  // console.log(currentP);
+  // console.log(newP.appendChild(newContent));
+  // currentP.insertBefore(newP, currentP);
+  
 });
-
+{/* <i class="fas fa-trash"></i> */}
 /// functions
 function addPara(){
   const newP = document.createElement('p');
@@ -23,7 +28,8 @@ function addPara(){
 
   currentP.appendChild(newP);
   newP.textContent = inputValue.value;
-  let addingP = document.querySelectorAll('.item__list p');
-  addingP[addingP.length-1].appendChild(newIcon);
+  const addingP = document.querySelector('.item__list p');
+  console.log(addingP);
+  addingP.appendChild(newIcon);
   inputValue.value = '';
 };

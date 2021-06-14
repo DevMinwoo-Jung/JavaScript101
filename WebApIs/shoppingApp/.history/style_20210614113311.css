@@ -31,21 +31,13 @@ body {
 .item__list {
   height: 210px;
   background-color: var(--background-color);
-  overflow-y: scroll;
-  margin-top: 10px;
-  margin-bottom: -5px;
 }
 
 .item__list p {
   text-align: left;
   padding-left: 10px;
+  padding-top: 10px;
   font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.fas.fa-trash {
-  padding-top: 15px;
-  padding-left: 200px;
 }
 
 .item__list__input {
@@ -59,7 +51,6 @@ body {
 input {
   width: 295px;
   border: 0px;
-  margin-top: 00px;
 }
 
 .input__box {
