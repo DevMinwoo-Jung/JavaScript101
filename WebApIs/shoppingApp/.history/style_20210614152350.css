@@ -45,9 +45,7 @@ body {
   right: 150px;
 }
 
-.new__div {
-  display: flex;
-  margin: 10px;
+.fas.fa-trash {
 }
 
 .item__list__input {

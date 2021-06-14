@@ -27,8 +27,8 @@ function addPara(){
   newDiv.appendChild(newP);
   
   newP.textContent = inputValue.value;
-  let addingP = document.querySelectorAll('.new__div');
-  addingP[addingP.length-1].appendChild(newIcon);
+  let addingP = document.querySelectorAll('.new__div p');
+  // addingP[addingP.length-1].appendChild(newIcon);
   inputValue.value = '';
 };
 

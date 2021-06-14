@@ -41,13 +41,14 @@ body {
   padding-left: 10px;
   font-size: 15px;
   margin: 0px;
-  width: 250px;
-  right: 150px;
+  width: 150px;
+  display: flex;
 }
 
-.new__div {
-  display: flex;
-  margin: 10px;
+.fas.fa-trash {
+  position: relative;
+  padding-top: 15px;
+  left: 200px;
 }
 
 .item__list__input {

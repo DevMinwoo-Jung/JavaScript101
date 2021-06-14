@@ -34,6 +34,7 @@ body {
   overflow-y: scroll;
   margin-top: 10px;
   margin-bottom: -5px;
+  display: flex;
 }
 
 .item__list p {
@@ -42,12 +43,12 @@ body {
   font-size: 15px;
   margin: 0px;
   width: 250px;
-  right: 150px;
 }
 
-.new__div {
-  display: flex;
-  margin: 10px;
+.fas.fa-trash {
+  padding-top: -15px;
+  width: 100px;
+  left: 20px;
 }
 
 .item__list__input {

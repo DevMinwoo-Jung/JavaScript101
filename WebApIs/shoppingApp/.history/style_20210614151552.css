@@ -42,12 +42,14 @@ body {
   font-size: 15px;
   margin: 0px;
   width: 250px;
-  right: 150px;
+  display: flex;
 }
 
-.new__div {
+.fas.fa-trash {
+  position: relative;
+  padding-top: -15px;
+  left: 200px;
   display: flex;
-  margin: 10px;
 }
 
 .item__list__input {

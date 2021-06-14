@@ -40,14 +40,12 @@ body {
   text-align: left;
   padding-left: 10px;
   font-size: 15px;
-  margin: 0px;
   width: 250px;
   right: 150px;
 }
 
 .new__div {
   display: flex;
-  margin: 10px;
 }
 
 .item__list__input {
