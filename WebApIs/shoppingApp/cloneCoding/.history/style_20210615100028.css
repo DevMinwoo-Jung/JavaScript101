@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+body {
+  background-color: #ced3df;
+}
+
+.list {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  background-color: #f1f0f7;
+  border-radius: 20px;
+}
+
+.header {
+  height: 48px;
+  padding: 8px;
+  font-size: 24px;
+  background: rgba(237, 193, 211);
+  background: linear-gradient(
+    166deg,
+    rgba(237, 193, 211, 1) 0%,
+    rgba(219, 190, 200, 1) 35%,
+    rgba(120, 180, 240, 1) 100%
+  );
+  border-radius: 20px 20px 0 0;
+  color: white;
+}
+
+.items {
+  /* 반은형일때는 px단위가 아니라 더 좋은 방법이 있는데 추후 배운다함 */
+  height: 500px;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  /* 양 옆으로 나눠주는 것 */
+  padding: 8px 32px;
+}
+
+.footer {
+  background: rgba(237, 193, 211);
+  background: linear-gradient(
+    166deg,
+    rgba(237, 193, 211, 1) 0%,
+    rgba(219, 190, 200, 1) 35%,
+    rgba(120, 180, 240, 1) 100%
+  );
+  border-radius: 0 0 20px 20px;
+}
