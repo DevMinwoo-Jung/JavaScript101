@@ -12,12 +12,10 @@ function onAdd(){
   }
   console.log(text);
   // 2. 새로운 아이템을 만든다 (텍스트 + 삭제 버튼)
-  const item = createItem(text);
+  const item = createItem();
   // 3. items 컨테이너안에 새로 만든 아이템을 추가한다
   items.appendChild(item);
-  // 4. 새로 추가된 아이템으로 스크롤링
-  item.scrollIntoView({block: 'center'});
-  // 5. input을 초기화 한다.
+  // 4. input을 초기화 한다.
   input.value = '';
   input.focus();
 }
@@ -54,10 +52,4 @@ function createItem(text) {
 
 addBtn.addEventListener('click', () => {
   onAdd();
-});
-
-input.addEventListener('keypress', (event) => {
-  if(event.key === 'Enter'){
-    onAdd();
-  }
 });

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="main.js" defer></script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
   integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -16,7 +16,15 @@
       Shopping List
     </header>
     <ul class="items">
-
+      <li class="item__row">
+        <div class="item">
+          <span class="item__name">Egg</span>
+          <button class="item__delete">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+        <div class="item__divider"></div>
+      </li>
     </ul>
     <footer class="footer">
       <input type="text" class="footer__input">
@@ -26,4 +34,5 @@
     </footer>
   </section>
 </body>
+<script src="main.js" defer></script>
 </html>
