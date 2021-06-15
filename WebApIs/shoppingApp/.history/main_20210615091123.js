@@ -1,5 +1,7 @@
 const addButton = document.querySelector('.addItem');
 const inputBox = document.querySelector('.input__box');
+const inputValue = document.querySelector('.input__box');
+
 
 inputBox.addEventListener('keyup', (e) => {
   if(e.key == 'Enter'){
@@ -10,7 +12,6 @@ inputBox.addEventListener('keyup', (e) => {
 
 addButton.addEventListener('click', () => {
   addPara();
-  inputBox.focus();
 });
 
 /// functions
