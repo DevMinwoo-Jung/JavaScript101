@@ -1,6 +1,7 @@
 const addButton = document.querySelector('.addItem');
 const inputBox = document.querySelector('.input__box');
 const eventDiv = document.querySelector('.event__div');
+const removeBtn = document.querySelectorAll('.fas fa-trash');
 
 eventDiv.addEventListener('click', event => {
  if (event.target.className === 'add__Item'){
@@ -46,5 +47,5 @@ function addPara(){
   addingP[addingP.length-1].appendChild(newIcon);
   inputBox.value = '';
 
-  const removeBtn = document.querySelectorAll('.fas fa-trash');
+
 };

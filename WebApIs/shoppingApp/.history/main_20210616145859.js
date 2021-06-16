@@ -47,4 +47,12 @@ function addPara(){
   inputBox.value = '';
 
   const removeBtn = document.querySelectorAll('.fas fa-trash');
+  
+  // for(let i=0; i<removeBtn.length; i++){
+  //   removeBtn[i].addEventListener('click', () => {
+  //     addingP[i].remove();
+  //   });
+  //   addingP[i].remove();
+  // }
+
 };

@@ -9,7 +9,10 @@ eventDiv.addEventListener('click', event => {
     inputBox.focus();
   } 
   if(event.target.className === 'fas fa-trash'){
-    removeBtn.closest("div").remove();
+    console.log(event.target.className);
+    console.log(event.currentTarget.className);
+    
+    addPara();
   }
 })
 
@@ -19,6 +22,12 @@ inputBox.addEventListener('keyup', (e) => {
   };
   
 });
+
+// addButton.addEventListener('click', (e) => {
+//   console.log(`e ${e.target}, cuT ${e.currentTarget}`);
+//   addPara();
+//   inputBox.focus();
+// });
 
 /// functions
 function addPara(){
@@ -47,4 +56,19 @@ function addPara(){
   inputBox.value = '';
 
   const removeBtn = document.querySelectorAll('.fas fa-trash');
+  
+  for(let i=0; i<removeBtn.length; i++){
+    removeBtn[i].addEventListener('click', () => {
+      addingP[i].remove();
+    });
+    addingP[i].remove();
+  }
 };
+
+
+function onRemovePara(){
+
+  const removeBtn = document.querySelectorAll('.fas fa-trash');
+  
+
+}

@@ -3,22 +3,28 @@ const inputBox = document.querySelector('.input__box');
 const eventDiv = document.querySelector('.event__div');
 
 eventDiv.addEventListener('click', event => {
- if (event.target.className === 'add__Item'){
-    console.log(event.target.className);
+  console.log(event.target.className);
+  if(event.target.className !== 'addItem' || event.target.className !== 'input__box'){
+    return;
+  } else if (event.target.className === 'add__Item'){
     addPara();
     inputBox.focus();
-  } 
-  if(event.target.className === 'fas fa-trash'){
-    removeBtn.closest("div").remove();
   }
 })
 
 inputBox.addEventListener('keyup', (e) => {
+  console.log(`e ${e.target}, cuT ${e.currentTarget}`);
   if(e.key == 'Enter'){
    addPara();
   };
   
 });
+
+// addButton.addEventListener('click', (e) => {
+//   console.log(`e ${e.target}, cuT ${e.currentTarget}`);
+//   addPara();
+//   inputBox.focus();
+// });
 
 /// functions
 function addPara(){
@@ -46,5 +52,12 @@ function addPara(){
   addingP[addingP.length-1].appendChild(newIcon);
   inputBox.value = '';
 
-  const removeBtn = document.querySelectorAll('.fas fa-trash');
+  const removeBtn = document.querySelectorAll('.fas ');
+  
+  for(let i=0; i<removeBtn.length; i++){
+    removeBtn[i].addEventListener('click', () => {
+      addingP[i].remove();
+    });
+  }
+
 };
