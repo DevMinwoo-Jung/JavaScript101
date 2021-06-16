@@ -30,7 +30,7 @@ let id = 0; //UUID or HashCOde가 좋다
 function createItem(text) {
   const itemRow = document.createElement('li');
   itemRow.setAttribute('class', 'item__row');
-  itemRow.setAttribute('data-id', id)
+
   itemRow.innerHTML = `        
   <div class="item">
       <span class="item__name">${text}</span>
@@ -54,9 +54,7 @@ input.addEventListener('keypress', (event) => {
 });
 
 items.addEventListener('click', event => {
-  const id = event.target.dataset.id;
-  if(id) {
-    const toBEDeleted = document.querySelector(`.item__row[data-id="${id}"]`);
-    toBEDeleted.remove();
+  if(event.target.nodeName === 'I'){
+
   }
 })
