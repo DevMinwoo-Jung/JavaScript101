@@ -1,0 +1,33 @@
+body {
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.start__button,
+.timer,
+.rabbit__carrot,
+.message__alert,
+.message__restart {
+  padding: auto;
+  display: block;
+  position: absolute;
+  background-color: black;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+
+.message__alert {
+  bottom: 120px;
+  height: 100px;
+  width: 200px;
+  margin: auto;
+}
+
+.message__restart {
+  bottom: 50px;
+  margin: auto;
+  height: 50px;
+  width: 100px;
+}

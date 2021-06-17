@@ -1,0 +1,39 @@
+body {
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game__zone {
+  margin: auto;
+}
+
+.start__button,
+.timer,
+.rabbit__carrot,
+.message__alert,
+.message__restart {
+  display: block;
+  position: relative;
+  background-color: black;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  margin: auto;
+}
+
+.message__alert {
+  position: absolute;
+  bottom: 120px;
+  height: 100px;
+  width: 200px;
+  left: 900px;
+}
+
+.message__restart {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+  width: 100px;
+  left: 1000px;
+}

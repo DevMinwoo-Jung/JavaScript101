@@ -1,0 +1,65 @@
+.root {
+  /* Button Size */
+  --button-width: 120;
+  --button-height: 100;
+}
+
+body {
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game__zone {
+  margin: auto;
+}
+
+.start__button,
+.timer,
+.score,
+.rabbit__carrot,
+.message__alert,
+.message__restart {
+  display: block;
+  position: relative;
+  background-color: black;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  margin: auto;
+}
+
+.start__button {
+  top: 50px;
+}
+
+.timer {
+  top: 70px;
+}
+
+.score {
+  top: 100px;
+}
+
+.rabbit__carrot {
+  position: absolute;
+  bottom: 10px;
+  height: 500px;
+  width: 1900px;
+}
+
+.message__alert {
+  position: absolute;
+  bottom: 120px;
+  height: var(--button-height);
+  width: var(--button-width);
+  left: 900px;
+}
+
+.message__restart {
+  position: absolute;
+  bottom: 50px;
+  height: var(--button-height);
+  width: var(--button-width);
+  left: 950px;
+}
