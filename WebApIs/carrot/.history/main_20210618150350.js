@@ -10,9 +10,10 @@ eventZone.addEventListener('click', event => {
     startBtn.style.display = 'block';
     stopBtn.style.display = 'none';
   } else if(event.target.className === 'fas fa-undo-alt'){
-    const restartBtnDiv = document.querySelector('.message__restart');
+    const restartBtn = document.querySelector('.fas.fa-duno-alt');
+    const restartBtnDiv = document.querySelector('.message__zone');
 
-    restartBtnDiv.style.display = 'none'
+    restartBtnDiv.setAttribute('display', 'none');
   } else {
     return;
   }

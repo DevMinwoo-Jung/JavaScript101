@@ -12,7 +12,7 @@ eventZone.addEventListener('click', event => {
   } else if(event.target.className === 'fas fa-undo-alt'){
     const restartBtnDiv = document.querySelector('.message__restart');
 
-    restartBtnDiv.style.display = 'none'
+    restartBtnDiv.setAttribute('display', 'none');
   } else {
     return;
   }
