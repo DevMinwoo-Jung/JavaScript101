@@ -53,13 +53,13 @@ body {
 }
 
 .score {
-  top: 80px;
+  top: 100px;
   width: calc(var(--button-width) * 1.2);
   height: calc(var(--button-height) * 1.2);
   background-color: rgb(255, 153, 0);
   color: white;
   border: var(--border);
-  border-radius: 100%;
+  border-radius: 100px;
   font-size: 30px;
   line-height: 2;
   text-align: center;
@@ -67,25 +67,25 @@ body {
 
 .rabbit__carrot {
   position: absolute;
-  bottom: 20px;
-  height: 600px;
+  bottom: 10px;
+  height: 500px;
   width: 1900px;
 }
 
-/* .message__alert {
+.message__alert {
   position: absolute;
-  bottom: 180px;
+  bottom: 120px;
   height: 100px;
   width: 200px;
   left: 900px;
-} */
+}
 
 .message__restart {
-  top: 350px;
-  width: 700px;
-  height: 200px;
-  background-color: black;
-  opacity: 0.5;
+  position: absolute;
+  bottom: 50px;
+  height: var(--button-height);
+  width: var(--button-width);
+  left: 950px;
 }
 
 /* Icons */
@@ -96,11 +96,6 @@ body {
   width: var(--button-width);
   border-radius: var(--border-radius);
   border: var(--border);
-}
-
-.fas.fa-play:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
 }
 
 .fa-play:before {
@@ -118,39 +113,8 @@ body {
   border: var(--border);
 }
 
-.fas.fa-stop:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
-}
-
 .fa-stop:before {
   font-size: 30px;
   line-height: 2;
   text-align: center;
-}
-
-.fas.fa-undo-alt {
-  background-color: rgb(255, 204, 102);
-  height: var(--button-height);
-  width: var(--button-width);
-  border-radius: 10px;
-  border: var(--border);
-  margin-top: 20px;
-}
-
-.fas.fa-undo-alt:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
-}
-
-.fa-undo-alt:before {
-  font-size: 30px;
-  line-height: 2;
-  text-align: center;
-  color: black;
-}
-
-.won__lose {
-  font-size: 40px;
-  margin: 20px;
 }

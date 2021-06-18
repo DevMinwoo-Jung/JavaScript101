@@ -138,11 +138,6 @@ body {
   margin-top: 20px;
 }
 
-.fas.fa-undo-alt:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
-}
-
 .fa-undo-alt:before {
   font-size: 30px;
   line-height: 2;

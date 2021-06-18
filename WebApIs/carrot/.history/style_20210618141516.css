@@ -98,11 +98,6 @@ body {
   border: var(--border);
 }
 
-.fas.fa-play:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
-}
-
 .fa-play:before {
   font-size: 30px;
   line-height: 2;
@@ -118,11 +113,6 @@ body {
   border: var(--border);
 }
 
-.fas.fa-stop:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
-}
-
 .fa-stop:before {
   font-size: 30px;
   line-height: 2;
@@ -136,11 +126,6 @@ body {
   border-radius: 10px;
   border: var(--border);
   margin-top: 20px;
-}
-
-.fas.fa-undo-alt:hover {
-  transform: scale(1.1);
-  transition: ease-in 0.2s;
 }
 
 .fa-undo-alt:before {

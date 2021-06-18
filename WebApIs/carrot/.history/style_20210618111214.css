@@ -1,0 +1,85 @@
+:root {
+  /* button Size */
+  --button-width: 120px;
+  --button-height: 50px;
+}
+
+body {
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game__zone {
+  margin: auto;
+}
+
+.start__button,
+.timer,
+.score,
+.rabbit__carrot,
+.message__alert,
+.message__restart {
+  display: block;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+.start__button {
+  top: 50px;
+  width: var(--button-width);
+  height: var(--button-height);
+}
+
+.timer {
+  top: 70px;
+  width: calc(var(--button-width) * 2);
+  height: calc(var(--button-height) * 1.5);
+}
+
+.score {
+  top: 100px;
+  width: calc(var(--button-width) * 2);
+  height: calc(var(--button-height) * 2);
+}
+
+.rabbit__carrot {
+  position: absolute;
+  bottom: 10px;
+  height: 500px;
+  width: 1900px;
+}
+
+.message__alert {
+  position: absolute;
+  bottom: 120px;
+  height: 100px;
+  width: 200px;
+  left: 900px;
+}
+
+.message__restart {
+  position: absolute;
+  bottom: 50px;
+  height: var(--button-height);
+  width: var(--button-width);
+  left: 950px;
+}
+
+/* Icons */
+.fas.fa-play {
+  background-color: rgb(255, 204, 153);
+  color: black;
+  height: var(--button-height);
+  width: var(--button-width);
+  border-radius: 10px;
+  border: solid black;
+}
+
+.fa-play:before {
+  font-size: 30px;
+  line-height: 2;
+  text-align: center;
+}
