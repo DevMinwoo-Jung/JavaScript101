@@ -98,7 +98,7 @@ body {
   border-radius: var(--border-radius);
   border: var(--border);
   opacity: 1;
-  right: 0px;
+  right: 10px;
 }
 
 .fas.fa-play:hover {
@@ -120,8 +120,7 @@ body {
   width: var(--button-width);
   border-radius: 10px;
   border: var(--border);
-  display: none;
-  right: 0px;
+  opacity: 0;
 }
 
 .fas.fa-stop:hover {

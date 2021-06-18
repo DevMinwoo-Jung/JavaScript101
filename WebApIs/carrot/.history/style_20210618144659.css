@@ -90,15 +90,12 @@ body {
 
 /* Icons */
 .fas.fa-play {
-  position: absolute;
   background-color: rgb(255, 204, 153);
   color: black;
   height: var(--button-height);
   width: var(--button-width);
   border-radius: var(--border-radius);
   border: var(--border);
-  opacity: 1;
-  right: 0px;
 }
 
 .fas.fa-play:hover {
@@ -113,15 +110,13 @@ body {
 }
 
 .fas.fa-stop {
-  position: absolute;
   background-color: rgb(255, 204, 153);
   color: black;
   height: var(--button-height);
   width: var(--button-width);
   border-radius: 10px;
   border: var(--border);
-  display: none;
-  right: 0px;
+  opacity: 0;
 }
 
 .fas.fa-stop:hover {
