@@ -1,8 +1,7 @@
 const eventZone = document.querySelector('.game__zone');
 const stopBtn = document.querySelector('.fas.fa-stop');
 const startBtn = document.querySelector('.fas.fa-play');
-let second = Number(document.querySelectorAll('.timer p')[0].innerHTML);
-let time;
+let second = 11;
 
 eventZone.addEventListener('click', event => {
   if(event.target.className === 'fas fa-play'){
@@ -20,15 +19,18 @@ eventZone.addEventListener('click', event => {
   }
 });
 
-function startTime(){
-  time = setInterval(timer, 1000);
+function minusTime(){
+  // for(let i=0; i<11; i++){
+  //   setTimeout(timer, 1000);
+  // }
+  let i = 0;
+  while(i < 11){
+    setTimeout(timer, 100);
+    i++;
+  }
 }
 
 function timer(){
   console.log(second);
-  second = second - 1;
-  Number(document.querySelectorAll('.timer p')[0].innerHTML) - 1;
-  if(second < 0){
-    clearInterval(time);
-  }
+ second = second - 1;
 }

@@ -27,7 +27,7 @@ function startTime(){
 function timer(){
   console.log(second);
   second = second - 1;
-  Number(document.querySelectorAll('.timer p')[0].innerHTML) - 1;
+  Number(document.querySelectorAll('.timer p')[0]).innerHTML = second - 1; 
   if(second < 0){
     clearInterval(time);
   }
