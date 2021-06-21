@@ -5,7 +5,7 @@ const bugCarrot = document.querySelector('.bug__carrot');
 const restartBtnDiv = document.querySelector('.message__restart');
 let bug = document.querySelectorAll('.bug');
 const score = document.querySelector('.score');
-
+const clearGame = document.querySelectorAll('.carrot');
 
 let drawingCarrotAndBud = execOnce(drawing);
 let second = document.querySelector('.second').innerHTML;
@@ -32,10 +32,13 @@ if(event.target.className === 'fas fa-play'){
     startBtn.style.display = 'block';
     stopBtn.style.display = 'none';
   } else if(event.target.className === 'carrot'){
-    countCarrot();
+    for(let carrot of document.querySelectorAll('.carrot')){
+      carrot.addEventListener('click', () =>{
+        carrot.remove();
+      })
+    }
     score.innerHTML = Number(score.innerHTML) + 1;
-    if(document.querySelectorAll('.carrot') == null
-    || document.querySelectorAll('.carrot').length == 0){
+    if(clearGame == null){
       restartBtnDiv.style.display = 'block'
       document.querySelector('.won__lose').innerHTML = 'You Won!';
       second = 10;
@@ -53,15 +56,8 @@ if(event.target.className === 'fas fa-play'){
   }
 });
 
-function countCarrot(){
+function coundCarrot(){
   let carrots = document.querySelectorAll('.carrot');
-  for(let carrot of carrots){
-    carrot.addEventListener('click', () =>{
-      console.log(carrots);
-      console.log(carrot);
-      carrot.remove();
-    })
-  }
 }
 
 function startTimer(){
@@ -101,7 +97,7 @@ class CarrotAndBug {
     const newCarrot = document.createElement('img');
     newCarrot.setAttribute('src', 'img/carrot.png');
     newCarrot.setAttribute('class', 'carrot');
-    newCarrot.style.left = Math.random()* 1800 + 'px';
+    newCarrot.style.left = Math.random()* 750 + 'px';
     newCarrot.style.top = Math.random()* 500 + 'px';
     bugCarrot.appendChild(newCarrot);
   }
@@ -109,7 +105,7 @@ class CarrotAndBug {
     const newBug = document.createElement('img');
     newBug.setAttribute('src', 'img/bug.png');
     newBug.setAttribute('class', 'bug');
-    newBug.style.left = Math.random()* 1300 + 'px';
+    newBug.style.left = Math.random()* 750 + 'px';
     newBug.style.top = Math.random()* 500 + 'px';
     bugCarrot.appendChild(newBug);
   }

@@ -169,13 +169,12 @@ body {
 
 /* carrt and bug */
 .carrot {
-  position: absolute;
-  display: block;
+  position: relative;
 }
 
 .bug {
   position: absolute;
-  display: block;
+  right: 1000px;
 }
 
 .carrot:hover {

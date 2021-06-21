@@ -101,7 +101,7 @@ class CarrotAndBug {
     const newCarrot = document.createElement('img');
     newCarrot.setAttribute('src', 'img/carrot.png');
     newCarrot.setAttribute('class', 'carrot');
-    newCarrot.style.left = Math.random()* 1800 + 'px';
+    newCarrot.style.left = Math.random()* 1300 + 'px';
     newCarrot.style.top = Math.random()* 500 + 'px';
     bugCarrot.appendChild(newCarrot);
   }
