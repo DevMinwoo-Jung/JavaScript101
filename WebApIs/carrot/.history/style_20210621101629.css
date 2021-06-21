@@ -52,11 +52,6 @@ body {
   text-align: center;
 }
 
-.timer p {
-  margin: auto;
-  display: inline;
-}
-
 .score {
   top: 80px;
   width: calc(var(--button-width) * 1.2);
@@ -68,6 +63,10 @@ body {
   font-size: 30px;
   line-height: 2;
   text-align: center;
+}
+
+.score p {
+  top: 0;
 }
 
 .rabbit__carrot {

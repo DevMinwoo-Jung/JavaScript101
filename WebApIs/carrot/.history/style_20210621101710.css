@@ -53,8 +53,9 @@ body {
 }
 
 .timer p {
-  margin: auto;
-  display: inline;
+  font-size: 30px;
+  line-height: 2;
+  text-align: center;
 }
 
 .score {
