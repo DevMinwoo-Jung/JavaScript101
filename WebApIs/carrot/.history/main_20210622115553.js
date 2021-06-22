@@ -5,11 +5,6 @@ const bugCarrot = document.querySelector('.bug__carrot');
 const restartBtnDiv = document.querySelector('.message__restart');
 const score = document.querySelector('.score');
 
-let bg = new Audio('sound/bg.mp3');
-let gameAlert = new Audio('sound/alert.wav');
-let bugPull = new Audio('sound/bug_pull.mp3');
-let carrotPull = new Audio('sound/carrot_pull.mp3');
-let gameWin = new Audio('sound/game_win.mp3')
 let second = document.querySelector('.second').innerHTML;
 let time;
 let carrot;
@@ -24,7 +19,6 @@ if(event.target.className === 'fas fa-play'){
       drawing();
     }
     startTimer();
-    bg.play();
   } else if(event.target.className === 'fas fa-stop') {
     startBtn.style.display = 'block';
     stopBtn.style.display = 'none';
@@ -34,8 +28,6 @@ if(event.target.className === 'fas fa-play'){
     } else if (second > 0){
       clearInterval(time);
     }
-    bg.pause();
-    bg.currentTime = 0;
   } else if(event.target.className === 'carrot'){
     event.target.remove();
     score.innerHTML = Number(score.innerHTML) + 1;
@@ -45,26 +37,19 @@ if(event.target.className === 'fas fa-play'){
       document.querySelector('.won__lose').innerHTML = 'You Won!';
       second = 10;
       clearInterval(time);
-      gameWin.play();
-      gameWin.currentTime = 0;
     }
-    carrotPull.play();
-    carrotPull.currentTime = 0;
   } else if(second == 0 || event.target.className === 'bug'){
     const carrotImgs = document.querySelectorAll('.carrot');
     const bugImgs = document.querySelectorAll('.bug');
     for(let carrotImg of carrotImgs){
       carrotImg.style.pointerEvents = "none";
     }
-    for(let bugImg of bugImgs){
-      bugImg.style.pointerEvents = "none";
-    }
     restartBtnDiv.style.display = 'block'
+    carrotImg.style.pointerEvents = "none";
+    bugImg.style.pointerEvents = "none";
     document.querySelector('.won__lose').innerHTML = 'You Lose!';
     second = 10;
     clearInterval(time);
-    gameAlert.play();
-    bugPull.play();
   } else if(event.target.className === 'fas fa-undo-alt'){
     let bugs = document.querySelectorAll('.bug');
     let carrots = document.querySelectorAll('.carrot');
@@ -79,12 +64,6 @@ if(event.target.className === 'fas fa-play'){
     document.querySelector('.score').innerHTML = 0;
     startBtn.style.display = 'block';
     stopBtn.style.display = 'none';
-    bg.pause();
-    gameAlert.currentTime = 0;
-    bg.currentTime = 0;
-    bugPull.currentTime = 0;
-    carrotPull.currentTime = 0;
-    gameWin.currentTime = 0;
   } else {
     return;
   }

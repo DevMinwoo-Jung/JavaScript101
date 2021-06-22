@@ -3,28 +3,20 @@ const stopBtn = document.querySelector('.fas.fa-stop');
 const startBtn = document.querySelector('.fas.fa-play');
 const bugCarrot = document.querySelector('.bug__carrot');
 const restartBtnDiv = document.querySelector('.message__restart');
+let bug = document.querySelectorAll('.bug');
 const score = document.querySelector('.score');
 
-let bg = new Audio('sound/bg.mp3');
-let gameAlert = new Audio('sound/alert.wav');
-let bugPull = new Audio('sound/bug_pull.mp3');
-let carrotPull = new Audio('sound/carrot_pull.mp3');
-let gameWin = new Audio('sound/game_win.mp3')
+
+let drawingCarrotAndBud = execOnce(drawing);
 let second = document.querySelector('.second').innerHTML;
 let time;
-let carrot;
-let bug;
 
 eventZone.addEventListener('click', event => {
 if(event.target.className === 'fas fa-play'){
     startBtn.style.display = 'none';
     stopBtn.style.display = 'block';
-    if((carrot == undefined && bug == undefined)
-    || (document.querySelector('.carrot') == null && document.querySelector('.bug') == null)){
-      drawing();
-    }
+    drawingCarrotAndBud();
     startTimer();
-    bg.play();
   } else if(event.target.className === 'fas fa-stop') {
     startBtn.style.display = 'block';
     stopBtn.style.display = 'none';
@@ -34,61 +26,39 @@ if(event.target.className === 'fas fa-play'){
     } else if (second > 0){
       clearInterval(time);
     }
-    bg.pause();
-    bg.currentTime = 0;
+  } else if(event.target.className === 'fas fa-undo-alt'){
+    restartBtnDiv.style.display = 'none'
+    document.querySelector('.second').innerHTML = 10;
+    startBtn.style.display = 'block';
+    stopBtn.style.display = 'none';
   } else if(event.target.className === 'carrot'){
-    event.target.remove();
-    score.innerHTML = Number(score.innerHTML) + 1;
+    countCarrot();
     if(document.querySelectorAll('.carrot') == null
     || document.querySelectorAll('.carrot').length == 0){
       restartBtnDiv.style.display = 'block'
       document.querySelector('.won__lose').innerHTML = 'You Won!';
       second = 10;
       clearInterval(time);
-      gameWin.play();
-      gameWin.currentTime = 0;
     }
-    carrotPull.play();
-    carrotPull.currentTime = 0;
   } else if(second == 0 || event.target.className === 'bug'){
-    const carrotImgs = document.querySelectorAll('.carrot');
-    const bugImgs = document.querySelectorAll('.bug');
-    for(let carrotImg of carrotImgs){
-      carrotImg.style.pointerEvents = "none";
-    }
-    for(let bugImg of bugImgs){
-      bugImg.style.pointerEvents = "none";
-    }
     restartBtnDiv.style.display = 'block'
     document.querySelector('.won__lose').innerHTML = 'You Lose!';
     second = 10;
     clearInterval(time);
-    gameAlert.play();
-    bugPull.play();
-  } else if(event.target.className === 'fas fa-undo-alt'){
-    let bugs = document.querySelectorAll('.bug');
-    let carrots = document.querySelectorAll('.carrot');
-    for(let bug of bugs){
-        bug.remove();
-      }
-    for(let carrot of carrots){
-      carrot.remove();
-    }  
-    restartBtnDiv.style.display = 'none'
-    document.querySelector('.second').innerHTML = 10;
-    document.querySelector('.score').innerHTML = 0;
-    startBtn.style.display = 'block';
-    stopBtn.style.display = 'none';
-    bg.pause();
-    gameAlert.currentTime = 0;
-    bg.currentTime = 0;
-    bugPull.currentTime = 0;
-    carrotPull.currentTime = 0;
-    gameWin.currentTime = 0;
   } else {
     return;
   }
 });
+
+function countCarrot(){
+  let carrots = document.querySelectorAll('.carrot');
+  for(let carrot of carrots){
+    carrot.addEventListener('click', () =>{
+      carrot.remove();
+    })
+    score.innerHTML = Number(score.innerHTML) + 1;
+  }
+}
 
 function startTimer(){
   time = setInterval(timer, 1000);
@@ -102,21 +72,21 @@ function timer(){
   }
 }
 
-function removeBug(){
-  let bugs = document.querySelectorAll('.bug');
-  document.querySelector('.fas.fa-undo-alt').addEventListener('click', () => {
-  for(let bug of bugs){
-      bug.remove();
+function execOnce(fn, context){
+  let result;
+  return function () {
+    if (fn) {
+      result = fn.apply(context || this, arguments);
+      fn = null;
     }
-  })
+    return result;
+  };
 }
 
 function drawing() {
   for(let i = 0; i< 11; i++){
   new CarrotAndBug().createCarrot();
   new CarrotAndBug().createBug(); 
-  carrot = document.querySelectorAll('.carrot');
-  bug = document.querySelectorAll('.bug');
   } 
 };
 

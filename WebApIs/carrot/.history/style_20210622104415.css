@@ -77,6 +77,14 @@ body {
   width: 1900px;
 }
 
+/* .message__alert {
+  position: absolute;
+  bottom: 180px;
+  height: 100px;
+  width: 200px;
+  left: 900px;
+} */
+
 .message__restart {
   top: 350px;
   width: 700px;
@@ -164,23 +172,19 @@ body {
 .carrot {
   position: absolute;
   display: block;
-  pointer-events: stroke;
 }
 
 .bug {
   position: absolute;
   display: block;
-  pointer-events: stroke;
 }
 
 .carrot:hover {
   transform: scale(1.1);
   transition: ease-in 0.2s;
-  pointer-events: stroke;
 }
 
 .bug:hover {
   transform: scale(1.1);
   transition: ease-in 0.2s;
-  pointer-events: stroke;
 }
