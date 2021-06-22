@@ -58,10 +58,9 @@ button {
 }
 
 .game__field {
-  position: relative;
   background-color: blue;
-  width: 100%;
-  margin-top: 100px;
+  width: 100%px;
+  margin-top: 40px;
 }
 
 .pop-up {

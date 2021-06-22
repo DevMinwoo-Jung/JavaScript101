@@ -20,7 +20,7 @@ function addItem(classNmae, count, imgPath){
     const item = document.createElement('img');
     item.setAttribute('class', classNmae);
     item.setAttribute('src', imgPath);
-    item.style.position = 'absolute'
+    item.style.position = 'abslute'
     const x = randomNumber(x1, x2);
     const y = randomNumber(y1, y2);
     item.style.left = `${x}px`;
