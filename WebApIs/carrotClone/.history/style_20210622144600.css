@@ -1,14 +1,9 @@
-body {
-  text-align: center;
-}
 .game {
   display: flex;
   flex-direction: column;
   width: 800px;
   height: 500px;
   background: url(img/background.png) center/cover;
-  margin: auto;
-  border-radius: 20px;
 }
 
 button {
@@ -66,34 +61,19 @@ button {
 
 .pop-up {
   width: 400px;
-  height: 140px;
-  padding: 20px;
-  background-color: #00000090;
-  border-radius: 20px;
-  opacity: 0.6;
+  height: 120px;
+  background-color: black;
   color: white;
   text-align: center;
-  margin: auto;
-  transform: translateY(-150%);
 }
 
 .pop-up__refresh {
-  display: block;
   width: 60px;
   height: 60px;
   font-size: 24px;
   background-color: wheat;
   border: 2px solid black;
   border-radius: 50%;
-  display: block;
-  margin: auto;
 }
 
-.pop-up--hide {
-  display: none;
-}
-
-.pop-up__mesage {
-  display: block;
-  font-size: 38px;
-}
+.pop-up;

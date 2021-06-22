@@ -8,7 +8,6 @@ body {
   height: 500px;
   background: url(img/background.png) center/cover;
   margin: auto;
-  border-radius: 20px;
 }
 
 button {
@@ -78,7 +77,6 @@ button {
 }
 
 .pop-up__refresh {
-  display: block;
   width: 60px;
   height: 60px;
   font-size: 24px;

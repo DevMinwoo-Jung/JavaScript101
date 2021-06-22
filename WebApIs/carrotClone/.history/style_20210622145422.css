@@ -8,7 +8,6 @@ body {
   height: 500px;
   background: url(img/background.png) center/cover;
   margin: auto;
-  border-radius: 20px;
 }
 
 button {
