@@ -78,7 +78,6 @@ function stopGame(){
   stopGameTimer();
   hideGameButton();
   showPopUpWithText('REPLAY?');
-  plsySound(alertSound);
   stopSound(bgSound);
 }
 
@@ -90,8 +89,6 @@ function finishGame(win){
   }else {
     playSound(bugSound);
   }
-  stopGameTimer();
-  stopSound(bgSound);
   showPopUpWithText(win? 'YOU WON' : 'YOU LOST');
 }
 
@@ -99,7 +96,6 @@ function showStopButton(){
   const icon = gameBtn.querySelector('.fas');
   icon.classList.add('fa-stop');
   icon.classList.remove('fa-play');
-  gameBtn.style.visibility = 'visible';
 }
 
 function hideGameButton(){
@@ -119,10 +115,10 @@ function hidePopUp(){
 
 
 function initGame() {
-  score = 0;
   field.innerHTML = '';
   gameScore.innerText = CARROT_COUNT;
   // create bug and carrot 
+  console.log(filedRect);
   addItem('carrot', CARROT_COUNT, 'img/carrot.png');
   addItem('bug', BUG_COUNT, 'img/bug.png');
 }
@@ -134,13 +130,12 @@ function showTimerAndScore() {
 
 function onFieldClick(event){
   if(!started){
-
+    playSound(carrotSound);
     return;
   }
   const target = event.target;
   if(target.matches('.carrot')){
     // 당근!!
-    playSound(carrotSound);
     target.remove();
     score++;
     updateScoreBoard();
@@ -149,6 +144,7 @@ function onFieldClick(event){
     }
   } else if(target.matches('.bug')){
     // 벌레!!
+    stopGameTimer();
     finishGame(false);
   }
 }

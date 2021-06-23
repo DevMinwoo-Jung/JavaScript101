@@ -62,8 +62,6 @@ button {
   /* display none은 랜더 트리에 포함이 안되기 때문에
   render tree에 포함되지 않아 field사이즈에 영향을 줄 수 있으니
   visibility를 썼다 */
-  user-select: none;
-  cursor: auto;
 }
 
 .game__field {
