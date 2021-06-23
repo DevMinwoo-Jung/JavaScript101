@@ -24,14 +24,13 @@ gameBtn.addEventListener('click', () =>{
 function startGame(){
   initGame();
   showStopButton();
-  showTimerAndScore();
 }
 
 function stopGame(){
 
 }
 
-function showStopButton(){
+function showStopBUtton(){
   const icon = gameBtn.querySelector('.fa-play');
   icon.classList.add('fa-stop');
   icon.classList.remove('fa-play');
@@ -39,17 +38,10 @@ function showStopButton(){
 
 
 function initGame() {
-  field.innerHTML = '';
-  gameScore.innerText = CARROT_COUNT;
   // create bug and carrot 
   console.log(filedRect);
   addItem('carrot', CARROT_COUNT, 'img/carrot.png');
   addItem('bug', BUG_COUNT, 'img/bug.png');
-}
-
-function showTimerAndScore() {
-  gameTimer.style.visibility = 'visible';
-  gameScore.style.visibility = 'visible';
 }
 
 

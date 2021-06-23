@@ -7,49 +7,12 @@ const gameBtn = document.querySelector('.game__button');
 const gameTimer = document.querySelector('.game__timer');
 const gameScore = document.querySelector('.game__score');
 
-let started = false;
-let score = 0;
-let timer = undefined;
-
-gameBtn.addEventListener('click', () =>{
-  if(started) {
-    stopGame();
-  } else {
-    startGame();
-  }
-  started = ~started;
-});
-
-
-function startGame(){
-  initGame();
-  showStopButton();
-  showTimerAndScore();
-}
-
-function stopGame(){
-
-}
-
-function showStopButton(){
-  const icon = gameBtn.querySelector('.fa-play');
-  icon.classList.add('fa-stop');
-  icon.classList.remove('fa-play');
-}
-
 
 function initGame() {
-  field.innerHTML = '';
-  gameScore.innerText = CARROT_COUNT;
   // create bug and carrot 
   console.log(filedRect);
   addItem('carrot', CARROT_COUNT, 'img/carrot.png');
   addItem('bug', BUG_COUNT, 'img/bug.png');
-}
-
-function showTimerAndScore() {
-  gameTimer.style.visibility = 'visible';
-  gameScore.style.visibility = 'visible';
 }
 
 
@@ -76,3 +39,4 @@ function randomNumber(min, max){
   return Math.random() * (max - min) + min;
 }
 
+initGame();

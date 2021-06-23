@@ -40,7 +40,6 @@ function showStopButton(){
 
 function initGame() {
   field.innerHTML = '';
-  gameScore.innerText = CARROT_COUNT;
   // create bug and carrot 
   console.log(filedRect);
   addItem('carrot', CARROT_COUNT, 'img/carrot.png');

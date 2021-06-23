@@ -44,7 +44,6 @@ button {
   border: 5px solid black;
   font-size: 32px;
   margin-top: 8px;
-  visibility: hidden;
 }
 
 .game__score {
@@ -56,18 +55,14 @@ button {
   border-radius: 50%;
   text-align: center;
   margin-top: 8px;
-  visibility: hidden;
-  /* display none은 랜더 트리에 포함이 안되기 때문에
-  render tree에 포함되지 않아 field사이즈에 영향을 줄 수 있으니
-  visibility를 썼다 */
 }
 
 .game__field {
   position: relative;
-  /* background-color: blue; */
+  background-color: blue;
   width: 100%;
   height: 100%;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .pop-up {
