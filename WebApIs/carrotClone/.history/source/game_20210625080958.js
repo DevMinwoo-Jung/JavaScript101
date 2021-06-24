@@ -1,8 +1,8 @@
+
+'use strict'
 import * as sound from './sound.js'
 import PopUp from './popup.js';
 import Field from './filed.js';
-
-'use strict'
 
 const CARROT_COUNT = 5;
 const BUG_COUNT = 5;
@@ -27,8 +27,10 @@ export default class GameZone {
   this.gameBtn.addEventListener('click', () =>{
     this.onClick && this.onClick();
     if(this.started) {
+      alert("여기옴");
       this.stopGame();
     } else {
+      alert("저기옴");
       this.startGame();
     }
   });

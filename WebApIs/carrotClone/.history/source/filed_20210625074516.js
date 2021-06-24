@@ -31,7 +31,6 @@ export default class Field {
   }
 
   setClickListener(onItemClick){
-    alert('필드');
     this.onItemClick = onItemClick;
   }
 

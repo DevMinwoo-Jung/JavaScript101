@@ -29,6 +29,7 @@ export default class GameZone {
     if(this.started) {
       this.stopGame();
     } else {
+      alert("저기옴");
       this.startGame();
     }
   });

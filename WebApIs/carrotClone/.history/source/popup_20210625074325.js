@@ -12,7 +12,6 @@ export default class PopUp {
   }
 
   setClickListener(onClick){
-    alert('팝업');
     this.onClick = onClick;
   }
 

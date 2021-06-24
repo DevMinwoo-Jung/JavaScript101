@@ -1,8 +1,8 @@
+
+'use strict'
 import * as sound from './sound.js'
 import PopUp from './popup.js';
 import Field from './filed.js';
-
-'use strict'
 
 const CARROT_COUNT = 5;
 const BUG_COUNT = 5;
@@ -27,14 +27,19 @@ export default class GameZone {
   this.gameBtn.addEventListener('click', () =>{
     this.onClick && this.onClick();
     if(this.started) {
+      alert("여기옴");
       this.stopGame();
     } else {
+      alert("저기옴");
       this.startGame();
     }
   });
 
   }
 
+  setClickListener(onClick){
+    this.onClick = onClick;
+  }
 
   startGame(){
     this.started = true;
@@ -89,7 +94,7 @@ export default class GameZone {
     this.updateTimerText(remainingTimeSec);
     this.timer = setInterval(() => {
       if(remainingTimeSec <= 0){
-        clearInterval(this.timer);
+        clearInterval(timer);
         this.finishGame(CARROT_COUNT === this.score);
         return;
       }
@@ -99,7 +104,7 @@ export default class GameZone {
 
   finishGame(win){
     this.started = false;
-    this.hideGameButton();
+    hideGameButton();
     if(win){
       sound.playWin();
     }else {

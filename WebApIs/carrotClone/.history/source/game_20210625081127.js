@@ -27,8 +27,10 @@ export default class GameZone {
   this.gameBtn.addEventListener('click', () =>{
     this.onClick && this.onClick();
     if(this.started) {
+      alert("여기옴");
       this.stopGame();
     } else {
+      alert("저기옴");
       this.startGame();
     }
   });

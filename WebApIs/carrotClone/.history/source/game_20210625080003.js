@@ -1,17 +1,15 @@
+
+'use strict'
 import * as sound from './sound.js'
 import PopUp from './popup.js';
 import Field from './filed.js';
 
-'use strict'
+const gameFinishBanner = new PopUp();
+const gameField = new Field(CARROT_COUNT, BUG_COUNT);
 
 const CARROT_COUNT = 5;
 const BUG_COUNT = 5;
 const GAME_DURATION_SEC = 5;
-
-const gameFinishBanner = new PopUp();
-const gameField = new Field(CARROT_COUNT, BUG_COUNT);
-
-
 
 
 export default class GameZone {
@@ -27,14 +25,19 @@ export default class GameZone {
   this.gameBtn.addEventListener('click', () =>{
     this.onClick && this.onClick();
     if(this.started) {
+      alert("여기옴");
       this.stopGame();
     } else {
+      alert("저기옴");
       this.startGame();
     }
   });
 
   }
 
+  setClickListener(onClick){
+    this.onClick = onClick;
+  }
 
   startGame(){
     this.started = true;
@@ -61,7 +64,7 @@ export default class GameZone {
   }
   
   stopGameTimer(){
-    clearInterval(this.timer);
+    clearInterval(timer);
   }
 
   hideGameButton(){
@@ -69,7 +72,7 @@ export default class GameZone {
   }
 
   showStopButton(){
-      const icon = this.gameBtn.querySelector('.fas');
+      const icon = gameBtn.querySelector('.fas');
       icon.classList.add('fa-stop');
       icon.classList.remove('fa-play');
       this.gameBtn.style.visibility = 'visible';
@@ -86,11 +89,11 @@ export default class GameZone {
 
   startGameTimer() {
     let remainingTimeSec = GAME_DURATION_SEC;
-    this.updateTimerText(remainingTimeSec);
-    this.timer = setInterval(() => {
+    updateTimerText(remainingTimeSec);
+    timer = setInterval(() => {
       if(remainingTimeSec <= 0){
-        clearInterval(this.timer);
-        this.finishGame(CARROT_COUNT === this.score);
+        clearInterval(timer);
+        finishGame(CARROT_COUNT === score);
         return;
       }
       this.updateTimerText(--remainingTimeSec);
@@ -99,7 +102,7 @@ export default class GameZone {
 
   finishGame(win){
     this.started = false;
-    this.hideGameButton();
+    hideGameButton();
     if(win){
       sound.playWin();
     }else {

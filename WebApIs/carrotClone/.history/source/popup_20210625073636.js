@@ -12,11 +12,10 @@ export default class PopUp {
   }
 
   setClickListener(onClick){
-    alert('팝업');
     this.onClick = onClick;
   }
 
-  showWithText = text =>{
+  showWithText(text){
     this.popUpText.innerText = text;
     this.popUp.classList.remove('pop-up--hide');
     this.popUp.style.visibility = 'visible';
