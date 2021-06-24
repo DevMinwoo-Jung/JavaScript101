@@ -1,22 +1,9 @@
 import PopUp from './popup.js';
 import Field from './filed.js';
-import * as sound from './sound.js';
+import * as sound from './sound.js'
 import Game from './game.js';
 
 'use strict'
-
-// const gameBtn = document.querySelector('.game__button');
-// const gameTimer = document.querySelector('.game__timer');
-// const gameScore = document.querySelector('.game__score');
-
-const CARROT_COUNT = 5;
-const BUG_COUNT = 5;
-const GAME_DURATION_SEC = 5;
-
-
-let started = false;
-let score = 0;
-let timer = undefined;
 
 const game = new Game();
 
@@ -45,14 +32,14 @@ function onItemClick(item){
   }
 }
 
-// gameBtn.addEventListener('click', () =>{
-//   if(started) {
-//     stopGame();
-//   } else {
-//     startGame();
-//   }
+gameBtn.addEventListener('click', () =>{
+  if(started) {
+    stopGame();
+  } else {
+    startGame();
+  }
   
-// });
+});
 
 
 function startGameTimer() {

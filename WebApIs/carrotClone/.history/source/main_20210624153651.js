@@ -1,7 +1,6 @@
 import PopUp from './popup.js';
 import Field from './filed.js';
-import * as sound from './sound.js';
-import Game from './game.js';
+import * as sound from './sound.js'
 
 'use strict'
 
@@ -9,16 +8,16 @@ import Game from './game.js';
 // const gameTimer = document.querySelector('.game__timer');
 // const gameScore = document.querySelector('.game__score');
 
-const CARROT_COUNT = 5;
-const BUG_COUNT = 5;
-const GAME_DURATION_SEC = 5;
+// const CARROT_COUNT = 5;
+// const BUG_COUNT = 5;
+// const GAME_DURATION_SEC = 5;
 
 
-let started = false;
-let score = 0;
-let timer = undefined;
+// let started = false;
+// let score = 0;
+// let timer = undefined;
 
-const game = new Game();
+
 
 const gameFinishBanner = new PopUp();
 gameFinishBanner.setClickListener(() => {

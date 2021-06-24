@@ -1,7 +1,6 @@
 import PopUp from './popup.js';
 import Field from './filed.js';
-import * as sound from './sound.js';
-import Game from './game.js';
+import * as sound from './sound.js'
 
 'use strict'
 
@@ -18,7 +17,7 @@ let started = false;
 let score = 0;
 let timer = undefined;
 
-const game = new Game();
+
 
 const gameFinishBanner = new PopUp();
 gameFinishBanner.setClickListener(() => {
