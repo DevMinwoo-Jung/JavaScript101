@@ -96,6 +96,7 @@ button {
   background-color: wheat;
   border: 2px solid black;
   border-radius: 50%;
+  display: block;
   margin: auto;
 }
 
