@@ -20,7 +20,7 @@ game.setGameStopListener(reason => {
   console.log(reason);
   let message;
   switch(reason){
-    case 'cancel':
+    case 'cancle':
       message = 'REPLAY?';
       break;
     case 'win':

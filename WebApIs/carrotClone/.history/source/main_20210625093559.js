@@ -11,16 +11,16 @@ const gameFinishBanner = new PopUp();
 // });
 
 const game = new GameBuilder()
-.withGameDuration(5)
-.withCarrotCount(3)
-.withBugCount(3)
+.gameDuration(5)
+.carrotCount(3)
+.bugCount(3)
 .build();
 // 어떤 값을 설정했는지 알아보기 쉽다.
 game.setGameStopListener(reason => {
   console.log(reason);
   let message;
   switch(reason){
-    case 'cancel':
+    case 'cancle':
       message = 'REPLAY?';
       break;
     case 'win':
