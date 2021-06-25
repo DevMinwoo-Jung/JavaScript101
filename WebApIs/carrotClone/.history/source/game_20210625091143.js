@@ -48,7 +48,7 @@ export default class GameZone {
       if(item === 'carrot'){
         this.score++;
         this.updateScoreBoard();
-        if(this.score == this.carrotCount){
+        if(score == CARROT_COUNT){
           this.finish(true);
         }
       } else if(item === 'bug'){

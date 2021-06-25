@@ -4,8 +4,12 @@ import Field from './filed.js';
 
 'use strict'
 
+const CARROT_COUNT = 5;
+const BUG_COUNT = 5;
+const GAME_DURATION_SEC = 5;
+
 const gameFinishBanner = new PopUp();
-// const gameField = new Field(CARROT_COUNT, BUG_COUNT);
+const gameField = new Field(CARROT_COUNT, BUG_COUNT);
 
 
 export default class GameZone {
@@ -18,7 +22,7 @@ export default class GameZone {
     this.gameBtn = document.querySelector('.game__button');
     this.gameTimer = document.querySelector('.game__timer');
     this.gameScore = document.querySelector('.game__score');
-
+      
     this.started = false;
     this.score = 0;
     this.timer = undefined;
@@ -48,7 +52,7 @@ export default class GameZone {
       if(item === 'carrot'){
         this.score++;
         this.updateScoreBoard();
-        if(this.score == this.carrotCount){
+        if(score == CARROT_COUNT){
           this.finish(true);
         }
       } else if(item === 'bug'){
@@ -74,7 +78,7 @@ export default class GameZone {
       // gameFinishBanner.showWithText('REPLAY?');
       sound.playAlert();
       sound.stopBackground();
-      this.onGameStop && this.onGameStop('cancle');
+      this.onGameStop && this.onGameStop();
     }
 
     finish(win){
@@ -87,14 +91,13 @@ export default class GameZone {
       }
       this.stopGameTimer();
       sound.stopBackground();
-      // gameFinishBanner.showWithText(win? 'YOU WON' : 'YOU LOST');
-      this.onGameStop && this.onGameStop(win? 'win' : 'lose');
+      gameFinishBanner.showWithText(win? 'YOU WON' : 'YOU LOST');
     }
 
     initGame() {
       this.score = 0;
-      this.gameScore.innerText = this.carrotCount;
-      this.gameField.init();
+      this.gameScore.innerText = CARROT_COUNT;
+      gameField.init();
     }
     
     stopGameTimer(){
@@ -118,16 +121,16 @@ export default class GameZone {
     }
 
     updateScoreBoard(){
-      this.gameScore.innerText = this.carrotCount - this.score;
+      this.gameScore.innerText = CARROT_COUNT - this.score;
     }
 
     startGameTimer() {
-      let remainingTimeSec = this.gameDuration;
+      let remainingTimeSec = GAME_DURATION_SEC;
       this.updateTimerText(remainingTimeSec);
       this.timer = setInterval(() => {
         if(remainingTimeSec <= 0){
           clearInterval(this.timer);
-          this.finish(this.carrotCount === this.score);
+          this.finish(CARROT_COUNT === this.score);
           return;
         }
         this.updateTimerText(--remainingTimeSec);

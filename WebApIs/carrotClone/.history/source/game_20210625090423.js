@@ -18,13 +18,13 @@ export default class GameZone {
     this.gameBtn = document.querySelector('.game__button');
     this.gameTimer = document.querySelector('.game__timer');
     this.gameScore = document.querySelector('.game__score');
-
+      
     this.started = false;
     this.score = 0;
     this.timer = undefined;
 
-    this.gameField = new Field(carrotCount, bugCount);
-    this.gameField.setClickListener(this.onItemClick);
+    // this.gameField = new Field(carrotCount, bugCount);
+    // this.gameField.setClickListener(this.onItemClick);
 
     this.gameBtn.addEventListener('click', () =>{
       this.onClick && this.onClick();
@@ -48,7 +48,7 @@ export default class GameZone {
       if(item === 'carrot'){
         this.score++;
         this.updateScoreBoard();
-        if(this.score == this.carrotCount){
+        if(score == CARROT_COUNT){
           this.finish(true);
         }
       } else if(item === 'bug'){
@@ -60,7 +60,6 @@ export default class GameZone {
 
     start(){
       this.started = true;
-      this.initGame();
       this.showStopButton();
       this.showTimerAndScore();
       this.startGameTimer();
@@ -88,14 +87,14 @@ export default class GameZone {
       this.stopGameTimer();
       sound.stopBackground();
       // gameFinishBanner.showWithText(win? 'YOU WON' : 'YOU LOST');
-      this.onGameStop && this.onGameStop(win? 'win' : 'lose');
+      this.onGameStop && this.onGameStop(wind? 'win' : 'lose');
     }
 
-    initGame() {
-      this.score = 0;
-      this.gameScore.innerText = this.carrotCount;
-      this.gameField.init();
-    }
+    // initGame() {
+    //   this.score = 0;
+    //   this.gameScore.innerText = this.carrotCount;
+    //   gameField.init();
+    // }
     
     stopGameTimer(){
       clearInterval(this.timer);

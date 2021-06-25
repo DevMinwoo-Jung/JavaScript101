@@ -30,7 +30,7 @@ game.setGameStopListener(reason => {
   gameFinishBanner.showWithText(message);
 })
 gameFinishBanner.setClickListener(() => {
-  game.start();
+  game.startGame();
 });
 
 

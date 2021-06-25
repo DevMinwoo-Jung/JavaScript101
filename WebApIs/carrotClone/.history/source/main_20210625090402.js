@@ -10,7 +10,7 @@ const gameFinishBanner = new PopUp();
 //   startGame();
 // });
 
-const game = new Game(2, 2, 2);
+const game = new Game(10, 10, 10);
 game.setGameStopListener(reason => {
   console.log(reason);
   let message;
@@ -30,7 +30,7 @@ game.setGameStopListener(reason => {
   gameFinishBanner.showWithText(message);
 })
 gameFinishBanner.setClickListener(() => {
-  game.start();
+  game.startGame();
 });
 
 

@@ -48,7 +48,7 @@ export default class GameZone {
       if(item === 'carrot'){
         this.score++;
         this.updateScoreBoard();
-        if(this.score == this.carrotCount){
+        if(score == CARROT_COUNT){
           this.finish(true);
         }
       } else if(item === 'bug'){
@@ -60,7 +60,6 @@ export default class GameZone {
 
     start(){
       this.started = true;
-      this.initGame();
       this.showStopButton();
       this.showTimerAndScore();
       this.startGameTimer();
@@ -94,7 +93,7 @@ export default class GameZone {
     initGame() {
       this.score = 0;
       this.gameScore.innerText = this.carrotCount;
-      this.gameField.init();
+      gameField.init();
     }
     
     stopGameTimer(){

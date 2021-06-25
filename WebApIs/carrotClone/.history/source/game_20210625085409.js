@@ -5,7 +5,7 @@ import Field from './filed.js';
 'use strict'
 
 const gameFinishBanner = new PopUp();
-// const gameField = new Field(CARROT_COUNT, BUG_COUNT);
+const gameField = new Field(CARROT_COUNT, BUG_COUNT);
 
 
 export default class GameZone {
@@ -18,7 +18,7 @@ export default class GameZone {
     this.gameBtn = document.querySelector('.game__button');
     this.gameTimer = document.querySelector('.game__timer');
     this.gameScore = document.querySelector('.game__score');
-
+      
     this.started = false;
     this.score = 0;
     this.timer = undefined;
@@ -48,7 +48,7 @@ export default class GameZone {
       if(item === 'carrot'){
         this.score++;
         this.updateScoreBoard();
-        if(this.score == this.carrotCount){
+        if(score == CARROT_COUNT){
           this.finish(true);
         }
       } else if(item === 'bug'){
@@ -88,13 +88,13 @@ export default class GameZone {
       this.stopGameTimer();
       sound.stopBackground();
       // gameFinishBanner.showWithText(win? 'YOU WON' : 'YOU LOST');
-      this.onGameStop && this.onGameStop(win? 'win' : 'lose');
+      this.onGameStop && this.onGameStop(wind? 'win' : 'lose');
     }
 
     initGame() {
       this.score = 0;
       this.gameScore.innerText = this.carrotCount;
-      this.gameField.init();
+      gameField.init();
     }
     
     stopGameTimer(){
