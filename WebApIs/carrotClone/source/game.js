@@ -1,6 +1,13 @@
-import * as sound from './sound.js'
+
 import PopUp from './popup.js';
-import Field from './filed.js';
+import {Field, ItemType } from './filed.js';
+import * as sound from './sound.js'
+
+export const Reason = Object.freeze({
+  win: 'win',
+  lose: 'lose',
+  cancel: 'cancel'
+});
 
 'use strict'
 
@@ -8,7 +15,7 @@ const gameFinishBanner = new PopUp();
 // const gameField = new Field(CARROT_COUNT, BUG_COUNT);
 
 // Builder Pattern
-export default class GameBuilder{
+export class GameBuilder{
   withGameDuration(duration){
     this.gameDuration = duration;
     return this;
@@ -54,7 +61,7 @@ class GameZone {
     this.gameBtn.addEventListener('click', () =>{
       this.onClick && this.onClick();
       if(this.started) {
-        this.stop();
+        this.stop(Reason.cancel);
       } else {
         this.start();
       }
@@ -70,15 +77,15 @@ class GameZone {
       if(!this.started){
         return;
       }
-      if(item === 'carrot'){
+      if(item === ItemType.carrot){
         this.score++;
         this.updateScoreBoard();
         if(this.score == this.carrotCount){
-          this.finish(true);
+          this.stop(Reason.win);
         }
-      } else if(item === 'bug'){
+      } else if(item === ItemType.bug){
         // 벌레!!
-        this.finish(false);
+        this.stop(Reason.lose);
       }
     }
 
@@ -92,28 +99,13 @@ class GameZone {
       sound.playBackground(); 
     }
     
-    stop(){
+    stop(reason){
       this.started = false;
       this.stopGameTimer();
       this.hideGameButton();
-      // gameFinishBanner.showWithText('REPLAY?');
-      sound.playAlert();
       sound.stopBackground();
-      this.onGameStop && this.onGameStop('cancle');
-    }
 
-    finish(win){
-      this.started = false;
-      this.hideGameButton();
-      if(win){
-        sound.playWin();
-      }else {
-        sound.playBug();
-      }
-      this.stopGameTimer();
-      sound.stopBackground();
-      // gameFinishBanner.showWithText(win? 'YOU WON' : 'YOU LOST');
-      this.onGameStop && this.onGameStop(win? 'win' : 'lose');
+      this.onGameStop && this.onGameStop(reason);
     }
 
     initGame() {
@@ -152,7 +144,7 @@ class GameZone {
       this.timer = setInterval(() => {
         if(remainingTimeSec <= 0){
           clearInterval(this.timer);
-          this.finish(this.carrotCount === this.score);
+          this.stop(this.carrotCount === this.score ? Reason.win : Reason.lose);
           return;
         }
         this.updateTimerText(--remainingTimeSec);
