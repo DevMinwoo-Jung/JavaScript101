@@ -1,5 +1,5 @@
 const levelTwoHeight = document.querySelector('.levelTwo--div').getBoundingClientRect().y;
-const levelThreeHeight = document.querySelector('.levelThree--div').getBoundingClientRect().y;
+const levelThreeHeight = document.querySelector('.levelThree').getBoundingClientRect().y;
 const goToLevelTwo = document.querySelector('.goToLvTwoBtn');
 const goToLvThreeBtn = document.querySelector('.goToLvThreeBtn');
 

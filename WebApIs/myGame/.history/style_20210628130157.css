@@ -1,7 +1,7 @@
 html,
 body {
+  height: 100vh;
   margin: 0;
-  overflow-y: hidden;
 }
 
 .game--section {
@@ -23,16 +23,19 @@ body {
 .levelOne--div {
   background: blue;
   height: 100vh;
+  width: 100vh;
 }
 
 .levelTwo--div {
   background: red;
   height: 100vh;
+  width: 100vh;
 }
 
 .levelThree--div {
   background: black;
   height: 100vh;
+  width: 100vh;
 }
 
 .goToLvTwoBtn {

@@ -1,7 +1,6 @@
 html,
 body {
-  margin: 0;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .game--section {
@@ -10,6 +9,7 @@ body {
 
 .levelOne {
   height: 100vh;
+  width: 100vh;
 }
 
 .levelTwo {

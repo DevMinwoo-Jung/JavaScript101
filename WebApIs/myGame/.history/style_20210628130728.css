@@ -1,7 +1,7 @@
 html,
 body {
+  height: 100vh;
   margin: 0;
-  overflow-y: hidden;
 }
 
 .game--section {
@@ -41,7 +41,7 @@ body {
   width: 100px;
   height: 100px;
   bottom: 15vh;
-  left: 100vh;
+  justify-content: center;
 }
 
 .goToLvThreeBtn {
@@ -50,5 +50,5 @@ body {
   width: 100px;
   height: 100px;
   bottom: 15vh;
-  left: 100vh;
+  justify-content: center;
 }
