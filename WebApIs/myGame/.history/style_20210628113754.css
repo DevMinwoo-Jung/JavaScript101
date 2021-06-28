@@ -4,18 +4,6 @@ body {
   margin: 0;
 }
 
-.game--section {
-  scroll-behavior: smooth;
-}
-
-.levelOne {
-  height: 100vh;
-}
-
-.levelTwo {
-  height: 100vh;
-}
-
 .game--div {
   display: block;
 }
@@ -37,10 +25,10 @@ body {
 
 .goToLvTwoBtn {
   background: white;
-  position: relative;
+  position: absolute;
   width: 100px;
   height: 100px;
-  bottom: 15vh;
+  bottom: 5vh;
   left: 100vh;
 }
 
@@ -49,6 +37,6 @@ body {
   position: relative;
   width: 100px;
   height: 100px;
-  bottom: 15vh;
+  bottom: 5vh;
   left: 100vh;
 }

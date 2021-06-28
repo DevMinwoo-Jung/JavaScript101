@@ -10,10 +10,10 @@ goNextLevel();
 function goNextLevel(){
   goToLevelTwo.addEventListener('click', () => {
     alert("눌린당");
-    scrollTo({top:levelTwoHeight, behavior: 'smooth'});
+    scrollTo({levelTwoHeight, behavior: 'smooth'});
   });
   goToLvThreeBtn.addEventListener('click', () => {
     alert("눌린당");
-    scrollTo({top:levelThreeHeight, behavior: 'smooth'});
+    scrollTo(0, levelThreeHeight);
   });
 }

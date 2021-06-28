@@ -14,6 +14,6 @@ function goNextLevel(){
   });
   goToLvThreeBtn.addEventListener('click', () => {
     alert("눌린당");
-    scrollTo({top:levelThreeHeight, behavior: 'smooth'});
+    scrollTo(0, levelThreeHeight);
   });
 }

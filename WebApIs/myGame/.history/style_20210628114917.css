@@ -4,10 +4,6 @@ body {
   margin: 0;
 }
 
-.game--section {
-  scroll-behavior: smooth;
-}
-
 .levelOne {
   height: 100vh;
 }
@@ -42,6 +38,7 @@ body {
   height: 100px;
   bottom: 15vh;
   left: 100vh;
+  scroll-behavior: smooth;
 }
 
 .goToLvThreeBtn {
@@ -51,4 +48,5 @@ body {
   height: 100px;
   bottom: 15vh;
   left: 100vh;
+  scroll-behavior: smooth;
 }
