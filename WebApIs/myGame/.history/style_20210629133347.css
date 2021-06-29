@@ -24,8 +24,6 @@ body {
   opacity: 0.7;
   background: black;
   z-index: 1;
-  -webkit-transition: opacity 1000ms linear;
-  transition: opacity 1000ms linear;
 }
 
 .start--btn {

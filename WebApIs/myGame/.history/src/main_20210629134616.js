@@ -10,7 +10,7 @@ console.log(scrollBtn);
 scrollBtn.goToLevelTwo;
 scrollBtn.goToLvThree;
 
-startGame.startByClick();
+onload = startGame.startByPress();
 
 
 
