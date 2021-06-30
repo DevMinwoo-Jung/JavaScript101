@@ -74,29 +74,23 @@ body {
 }
 
 .item--lists {
-  position: relative;
+  position: absolute;
   border: solid white;
   display: block;
   width: 300px;
   left: 100px;
   top: 100px;
-  height: 500px;
-  background: white;
-  transition: all 0.1s ease-in;
-}
-.item--lists.hide {
   height: 0px;
+  background: white;
+  transition: all 1s ease-in-out;
+}
+
+.item--lists.hide {
+  height: 500px;
 }
 
 .item {
-  position: relative;
   font-size: 15px;
-  margin: 50px 20px 50px 20px;
-  transition: all 0.1s ease-in;
-}
-
-.item.hide {
-  font-size: 0;
 }
 
 .levelTwo--div {
