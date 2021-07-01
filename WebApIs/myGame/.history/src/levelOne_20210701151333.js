@@ -1,27 +1,29 @@
 'use strict'
-import MessageBox from './messageBox.js';
 
-const messageBox = new MessageBox();
-
+import Scroll from './scroll.js';
+import StartGame from './startGame.js';
+import ItemList from './itemList.js';
 export default class LevelOne{
   constructor(){
     this.timerBar = document.querySelector('.timer--bar');
-    this.progressBar = 950;
-    this.minusTimeBar = 9.5;
-    this.timer;
+    this.progressBar = 1000;
+    this.minusTimeBar = 100;
     this.timerBar.addEventListener('click', () => {
-       this.timer = setInterval(this.startTimer, 100);
+       this.timer();
     })
   }
 
+   timer(){ 
+     setInterval(this.startTimer, 100);
+  }
+
   startTimer = () =>{
-    if(this.progressBar > 0){
+    if(this.progressBar >= 0){
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();
-      console.log(this.progressBar);
-    } else if (this.progressBar == 0) {
-      this.stopGame();
+    } else {
+      clearInterval(this.timer);
     }
   }
 
@@ -33,10 +35,9 @@ export default class LevelOne{
     }
   }
 
-  stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+  stopGame(){
+    if(this.timerBar.style.width === '0px'){
+      alert("게임 끝났슈");
+    }
   }
-
 }

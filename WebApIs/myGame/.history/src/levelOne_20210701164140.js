@@ -1,8 +1,8 @@
 'use strict'
-import MessageBox from './messageBox.js';
 
-const messageBox = new MessageBox();
-
+import Scroll from './scroll.js';
+import StartGame from './startGame.js';
+import ItemList from './itemList.js';
 export default class LevelOne{
   constructor(){
     this.timerBar = document.querySelector('.timer--bar');
@@ -15,12 +15,13 @@ export default class LevelOne{
   }
 
   startTimer = () =>{
+    this.timerBar.style.width = '950px';
     if(this.progressBar > 0){
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();
       console.log(this.progressBar);
-    } else if (this.progressBar == 0) {
+    } else {
       this.stopGame();
     }
   }
@@ -34,9 +35,6 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+      clearInterval(this.timer);
   }
-
 }

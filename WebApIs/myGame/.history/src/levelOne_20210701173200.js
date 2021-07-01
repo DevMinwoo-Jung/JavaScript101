@@ -34,9 +34,9 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+      clearInterval(this.timer);
+      messageBox.retryBtn.style.display = 'show';
+      console.log('꺅');
   }
 
 }

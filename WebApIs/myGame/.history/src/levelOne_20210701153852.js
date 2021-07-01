@@ -1,32 +1,38 @@
 'use strict'
-import MessageBox from './messageBox.js';
 
-const messageBox = new MessageBox();
-
+import Scroll from './scroll.js';
+import StartGame from './startGame.js';
+import ItemList from './itemList.js';
 export default class LevelOne{
   constructor(){
     this.timerBar = document.querySelector('.timer--bar');
     this.progressBar = 950;
-    this.minusTimeBar = 9.5;
-    this.timer;
+    this.minusTimeBar = 475;
+    this.stop;
     this.timerBar.addEventListener('click', () => {
-       this.timer = setInterval(this.startTimer, 100);
-    })
+       this.timer();
+    });
+  }
+
+   timer(){ 
+     setInterval(this.startTimer, 1000);
   }
 
   startTimer = () =>{
-    if(this.progressBar > 0){
+    if(this.timerBar.style.width > 0){
+      console.log(this.timerBar.style.width);
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();
-      console.log(this.progressBar);
-    } else if (this.progressBar == 0) {
-      this.stopGame();
+    } else if(this.timerBar.style.width == '0px'){
+      clearInterval(this.timer);
+      this.stop = this.stopGame();
+    } else {
+      throw new Error("뭐야");
     }
   }
 
   barColorChange(){
-    console.log(this.timerBar);
     if(this.timerBar.style.width < '300px'){
       this.timerBar.style.backgroundColor = 'red';
       this.timerBar.style.transform = 'scale(1.05)'
@@ -34,9 +40,9 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+    if(this.timerBar.style.width === '0px'){
+      console.log("계속 출력되나");
+      return;
+    }
   }
-
 }

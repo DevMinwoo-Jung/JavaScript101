@@ -21,5 +21,5 @@ scrollBtn.goToLvThree;
 itemList.arrowBtn;
 levelOne.timer;
 
-messageBox.show();
+messageBox.retryBtn;
 

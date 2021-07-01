@@ -128,15 +128,12 @@ body {
 .messageBox {
   position: relative;
   border: solid white;
-  display: block;
+  display: flex;
   width: 1000px;
-  top: 300px;
-  right: 25%;
+  top: 3000px;
+  left: 17%;
   height: 500px;
   background: white;
-  text-align: center;
-  font-size: 50px;
-  visibility: hidden;
 }
 
 .levelTwo--div {

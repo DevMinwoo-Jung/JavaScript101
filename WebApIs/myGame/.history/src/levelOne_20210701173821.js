@@ -34,7 +34,6 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
       messageBox.show();
       clearInterval(this.timer);  
   }

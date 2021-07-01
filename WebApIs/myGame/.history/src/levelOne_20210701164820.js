@@ -1,7 +1,4 @@
 'use strict'
-import MessageBox from './messageBox.js';
-
-const messageBox = new MessageBox();
 
 export default class LevelOne{
   constructor(){
@@ -34,9 +31,7 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+      clearInterval(this.timer);
+      console.log('꺅');
   }
-
 }

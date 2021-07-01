@@ -2,7 +2,7 @@ import Scroll from './scroll.js';
 import StartGame from './startGame.js';
 import ItemList from './itemList.js';
 import LevelOne from './levelOne.js';
-import MessageBox from './messageBox.js';
+import MessageBox from './messageBox';
 
 
 'use strict'
@@ -21,5 +21,5 @@ scrollBtn.goToLvThree;
 itemList.arrowBtn;
 levelOne.timer;
 
-messageBox.show();
+messageBox.retryBtn;
 

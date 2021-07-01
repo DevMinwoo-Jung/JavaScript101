@@ -1,8 +1,8 @@
 'use strict'
-import MessageBox from './messageBox.js';
 
-const messageBox = new MessageBox();
-
+import Scroll from './scroll.js';
+import StartGame from './startGame.js';
+import ItemList from './itemList.js';
 export default class LevelOne{
   constructor(){
     this.timerBar = document.querySelector('.timer--bar');
@@ -34,9 +34,6 @@ export default class LevelOne{
   }
 
   stopGame() {
-      console.log(messageBox.show);
-      messageBox.show();
-      clearInterval(this.timer);  
+      clearInterval(this.timer);
   }
-
 }
