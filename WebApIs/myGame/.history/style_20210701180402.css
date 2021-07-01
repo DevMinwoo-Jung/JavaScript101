@@ -136,11 +136,11 @@ body {
   background: white;
   text-align: center;
   font-size: 50px;
-  visibility: hidden;
+  display: none;
 }
 
 .messageBox.show {
-  visibility: visible;
+  display: show;
 }
 
 .levelTwo--div {

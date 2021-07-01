@@ -13,6 +13,6 @@ export default class MessageBox{
 
   show(){
     alert("이거 타냐?");
-    this.messageBox.classList.add('show');
+    this.messageBox.style.display = 'show';
   }
 }

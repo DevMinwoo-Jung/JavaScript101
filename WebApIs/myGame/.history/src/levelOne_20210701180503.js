@@ -22,7 +22,6 @@ export default class LevelOne{
       console.log(this.progressBar);
     } else if (this.progressBar == 0) {
       this.stopGame();
-      messageBox.show();
     }
   }
 
@@ -36,6 +35,7 @@ export default class LevelOne{
 
   stopGame() {
       console.log(messageBox.show);
+      messageBox.show();
       clearInterval(this.timer);  
   }
 
