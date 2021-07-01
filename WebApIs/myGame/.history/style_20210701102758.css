@@ -118,11 +118,11 @@ body {
   position: relative;
   display: flex;
   width: 950px;
-  height: 90px;
+  height: 80px;
+  border: solid black;
+  margin: auto;
   background-color: black;
-  transition: all 0.2s ease-in;
-  left: 20px;
-  top: 5px;
+  transition: width 0.2s ease-in;
 }
 
 .levelTwo--div {

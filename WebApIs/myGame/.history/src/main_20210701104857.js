@@ -14,7 +14,7 @@ const levelOne = new LevelOne();
 scrollBtn.goToLevelTwo;
 scrollBtn.goToLvThree;
 
-// startGame.startByClick();
+startGame.startByClick();
 itemList.arrowBtn;
 levelOne.timer;
 

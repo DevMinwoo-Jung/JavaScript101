@@ -117,12 +117,10 @@ body {
 .timer--bar {
   position: relative;
   display: flex;
-  width: 950px;
-  height: 90px;
-  background-color: black;
-  transition: all 0.2s ease-in;
-  left: 20px;
-  top: 5px;
+  width: 800px;
+  height: 80px;
+  border: solid black;
+  margin: auto;
 }
 
 .levelTwo--div {

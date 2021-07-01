@@ -121,6 +121,7 @@ body {
   height: 90px;
   background-color: black;
   transition: all 0.2s ease-in;
+  transform: scale(1.1);
   left: 20px;
   top: 5px;
 }

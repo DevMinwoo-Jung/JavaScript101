@@ -103,7 +103,7 @@ body {
   font-size: 0;
 }
 
-.timer--box {
+.time--box {
   position: relative;
   border: solid white;
   display: flex;
@@ -114,15 +114,12 @@ body {
   background: white;
 }
 
-.timer--bar {
+.time--bar {
   position: relative;
   display: flex;
-  width: 950px;
-  height: 90px;
-  background-color: black;
-  transition: all 0.2s ease-in;
-  left: 20px;
-  top: 5px;
+  width: 800px;
+  height: 80px;
+  border: solid black;
 }
 
 .levelTwo--div {
