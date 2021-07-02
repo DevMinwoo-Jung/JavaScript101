@@ -1,7 +1,7 @@
 import Scroll from './scroll.js';
 import StartGame from './startGame.js';
 import ItemList from './itemList.js';
-import LevelOneBuilder from './levelOne.js';
+import LevelOne from './levelOne.js';
 import MessageBox from './messageBox.js';
 
 
@@ -11,8 +11,8 @@ const scrollBtn = new Scroll();
 const startGame = new StartGame();
 const itemList = new ItemList();
 const messageBox = new MessageBox();
-const levelOne = new LevelOneBuilder()
-.withProgressBar(950)
+const levelOne = new LevelOne()
+.withTimerBar(950)
 .withMinusTimerBar(9.5)
 .build();
 

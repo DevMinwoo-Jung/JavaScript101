@@ -2,6 +2,10 @@
 
 'use strict'
 
+import LevelOne from './levelOne.js';
+
+const levelOne = new LevelOne();
+
 export default class MessageBox{
   constructor(){
     this.messageBox = document.querySelector('.messageBox');

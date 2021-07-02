@@ -15,7 +15,7 @@ export default class LevelOneBuilder{
 
   build() {
     return new LevelOne(
-      this.progressBar,
+      this.timerBar,
       this.minusTimeBar
     );
   }

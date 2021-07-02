@@ -15,7 +15,7 @@ export default class LevelOneBuilder{
 
   build() {
     return new LevelOne(
-      this.progressBar,
+      this.timerBar,
       this.minusTimeBar
     );
   }
@@ -26,7 +26,7 @@ class LevelOne{
   constructor(progressBar, minusTimeBar){
     this.progressBar = progressBar;
     this.minusTimeBar = minusTimeBar;
-
+    
     this.timerBar = document.querySelector('.timer--bar');
     this.timer;
     this.timerBar.addEventListener('click', () => {
@@ -35,9 +35,7 @@ class LevelOne{
   }
 
   startTimer = () =>{
-    console.log(this.progressBar);
     if(this.progressBar > 0){
-      console.log(this.timerBar);
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();

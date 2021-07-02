@@ -7,16 +7,11 @@ export default class MessageBox{
     this.messageBox = document.querySelector('.messageBox');
     this.retryBtn = document.querySelector('.retry--btn'); 
     this.retryBtn.addEventListener('click', () => {
-      this.setEventListener && this.setEventListener();
+      alert('클릭');
     })
   }
 
   show(){
     this.messageBox.classList.add('show');
   }
-
-  setEventListener(setEventListener){
-    this.setEventListener = setEventListener;
-  }
 }
-
