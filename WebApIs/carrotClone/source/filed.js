@@ -37,7 +37,6 @@ export class Field {
   }
 
   setClickListener(onItemClick){
-    alert('필드');
     this.onItemClick = onItemClick;
   }
 
@@ -53,6 +52,7 @@ export class Field {
     if(target.matches('.carrot')){
       // 당근!!
       target.remove();
+      console.log(this.onItemClick);
       sound.playCarrot();
       this.onItemClick && this.onItemClick(ItemType.carrot);
     } else if(target.matches('.bug')){
