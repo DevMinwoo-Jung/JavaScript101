@@ -18,6 +18,9 @@ const levelOne = new LevelOneBuilder()
 .withWrongCount(3)
 .build();
 
+// console.log(scrollBtn);
+// scrollBtn.goToLevelTwo;
+// scrollBtn.goToLvThree;
 
 levelOne.setGameStopListener(reason => {
   let message;
@@ -34,7 +37,10 @@ levelOne.setGameStopListener(reason => {
   messageBox.showWithText(message);
 })
 
+startGame.startByClick();
 messageBox.setEventListener(() => {
   levelOne.reset();
 });
+
+// levelOne.checkFish();
 

@@ -67,6 +67,10 @@ class LevelOne{
       this.initGame();
     });
 
+    // this.startBtn.addEventListener('click', () =>{
+    //   this.initGame();
+    // })
+
 
   }
 
@@ -75,7 +79,6 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){
@@ -146,12 +149,14 @@ class LevelOne{
   }
 
   checkFish(){
-    for(let answer of document.querySelectorAll('.answer')){
+    for(let answer of this.answers){
       answer.addEventListener('click', () => {
         answer.remove();
+        answer.parentNode.remove();
+        console.log(answer.parentNode)
       });
     };
-    for(let wrong of document.querySelectorAll('.wrong')){
+    for(let wrong of this.wrongs){
       wrong.addEventListener('click', () => {
         wrong.remove();
         this.minusHearts(this.i);

@@ -75,7 +75,7 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
+    this.checkFish();
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){
@@ -148,12 +148,20 @@ class LevelOne{
   checkFish(){
     for(let answer of document.querySelectorAll('.answer')){
       answer.addEventListener('click', () => {
+
         answer.remove();
+        
+
+
       });
     };
     for(let wrong of document.querySelectorAll('.wrong')){
       wrong.addEventListener('click', () => {
+
         wrong.remove();
+     
+
+
         this.minusHearts(this.i);
         this.i++;
       });

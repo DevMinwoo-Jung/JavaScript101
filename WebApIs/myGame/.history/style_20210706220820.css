@@ -217,4 +217,5 @@ body {
   width: 70px;
   height: 70px;
   position: absolute;
+  cursor: none;
 }

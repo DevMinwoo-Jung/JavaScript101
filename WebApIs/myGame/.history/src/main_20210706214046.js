@@ -15,18 +15,21 @@ const levelOne = new LevelOneBuilder()
 .withProgressBar(450)
 .withMinusTimerBar(4.5)
 .withAnswrCount(2)
-.withWrongCount(3)
+.withWrongCount()
 .build();
 
+// console.log(scrollBtn);
+// scrollBtn.goToLevelTwo;
+// scrollBtn.goToLvThree;
 
 levelOne.setGameStopListener(reason => {
   let message;
   switch(reason){
     case Reason.win:
-      message = 'Great Catch!';
+      message = 'Great Catch!asdasd';
       break;
     case Reason.lose:
-      message = 'YOU LOST';
+      message = 'YOU LOSTasdasd';
       break;
       default:
         throw new Error('not valid reason');
@@ -34,7 +37,10 @@ levelOne.setGameStopListener(reason => {
   messageBox.showWithText(message);
 })
 
+startGame.startByClick();
 messageBox.setEventListener(() => {
   levelOne.reset();
 });
+
+// levelOne.checkFish();
 

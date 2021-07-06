@@ -9,7 +9,7 @@ export default class MessageBox{
     this.field = new LvOneField(2, 3);
     this.messageBox = document.querySelector('.messageBox');
     this.message = document.querySelector('.message');
-    this.retryBtn = document.querySelector('.retry__btn'); 
+    this.retryBtn = document.querySelector('.retry--btn'); 
     this.retryBtn.addEventListener('click', () => {
       this.setEventListener && this.setEventListener();
     })

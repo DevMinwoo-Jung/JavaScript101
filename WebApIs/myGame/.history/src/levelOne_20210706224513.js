@@ -75,7 +75,7 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
+    this.checkFish();
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){

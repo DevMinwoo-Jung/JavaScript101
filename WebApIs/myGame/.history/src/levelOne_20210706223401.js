@@ -75,7 +75,6 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){
@@ -146,12 +145,15 @@ class LevelOne{
   }
 
   checkFish(){
-    for(let answer of document.querySelectorAll('.answer')){
+    for(let answer of this.answers){
       answer.addEventListener('click', () => {
         answer.remove();
+        answer.parentNode.remove();
+        console.log(answer.parentNode);
+        console.log("여기 타는건 맞지?");
       });
     };
-    for(let wrong of document.querySelectorAll('.wrong')){
+    for(let wrong of this.wrongs){
       wrong.addEventListener('click', () => {
         wrong.remove();
         this.minusHearts(this.i);

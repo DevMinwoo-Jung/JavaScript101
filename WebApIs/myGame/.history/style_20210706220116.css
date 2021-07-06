@@ -213,6 +213,12 @@ body {
   position: fixed;
 }
 
+.fish.orange2.wrong {
+  position: fixed;
+  left: 100px;
+  top: 400px;
+}
+
 .fish__div {
   width: 70px;
   height: 70px;

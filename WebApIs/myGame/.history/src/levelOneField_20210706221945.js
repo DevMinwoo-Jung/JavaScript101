@@ -12,6 +12,8 @@ export class LvOneField{
     this.answrCount = answrCount;
     this.wrongCount = wrongCount;
 
+    this.moveFish = true;
+
     this.fish = document.querySelector('.fish');
     this.gameField = document.querySelector('.game__field');
     this.fishDiv = document.querySelector('.fish__div');
@@ -112,7 +114,7 @@ export class LvOneField{
           });   
       }
     }
-
+    return;
 
 }
 

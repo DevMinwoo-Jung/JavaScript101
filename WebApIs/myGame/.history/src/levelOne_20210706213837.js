@@ -46,14 +46,14 @@ class LevelOne{
     this.answrCount = answrCount;
     this.wrongCount = wrongCount;
 
-    this.startGameBtn = document.querySelector('.start__btn');
-    this.timerBar = document.querySelector('.timer__bar');
+    this.startGameBtn = document.querySelector('.start--btn');
+    this.timerBar = document.querySelector('.timer--bar');
     this.hearts = document.querySelectorAll('.fa-heart');
     this.answers = document.querySelectorAll('.answer');
     this.wrongs = document.querySelectorAll('.wrong');
     this.fish = document.querySelector('.fish');
     this.gameScore = document.querySelector('.game__score');
-    
+    this.startScreen = document.querySelector('.levelOne');
 
     this.timer;
     this.life = 3;
@@ -67,6 +67,10 @@ class LevelOne{
       this.initGame();
     });
 
+    // this.startBtn.addEventListener('click', () =>{
+    //   this.initGame();
+    // })
+
 
   }
 
@@ -75,7 +79,6 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){
@@ -84,7 +87,7 @@ class LevelOne{
     } else if(item === ItemType.wrong){
       this.minusHearts(this.i);
       this.i++;
-
+      console.log(this.i);
     }
   }
 
@@ -93,7 +96,6 @@ class LevelOne{
     this.timer = setInterval(this.startTimer, 100);
     this.field.animateFish();
     this.timerBar.style.transition = 'all 0.2s ease-in';
-    this.startGameBtn.style.visibility = 'hidden'
   }
 
   startTimer = () => {
@@ -102,7 +104,7 @@ class LevelOne{
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();
     } else if (this.progressBar <= 0) {
-      this.gameOver(Reason.lose);
+      this.gameOver();
     } 
   }
 
@@ -134,7 +136,6 @@ class LevelOne{
     this.refillHearts();
     this.resetScoreBoard();
     this.removeFishes();
-    this.startGameBtn.style.visibility = 'visible'
   }
 
   minusHearts = (i) => {
@@ -146,12 +147,12 @@ class LevelOne{
   }
 
   checkFish(){
-    for(let answer of document.querySelectorAll('.answer')){
+    for(let answer of this.answers){
       answer.addEventListener('click', () => {
         answer.remove();
       });
     };
-    for(let wrong of document.querySelectorAll('.wrong')){
+    for(let wrong of this.wrongs){
       wrong.addEventListener('click', () => {
         wrong.remove();
         this.minusHearts(this.i);

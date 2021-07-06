@@ -75,7 +75,7 @@ class LevelOne{
   }
 
   onItemClick = item =>{
-
+    this.checkFish();
     if(item === ItemType.answer){
       this.updateScoreBoard();
       if(document.querySelectorAll('.answer').length == 0){
@@ -149,11 +149,18 @@ class LevelOne{
     for(let answer of document.querySelectorAll('.answer')){
       answer.addEventListener('click', () => {
         answer.remove();
+        answer.parentNode.remove();
+        console.log("여기 타는건 맞지?");
+        console.log(answer.parentNode);
+
       });
     };
     for(let wrong of document.querySelectorAll('.wrong')){
       wrong.addEventListener('click', () => {
         wrong.remove();
+        console.log("여기 타는건 맞지?");
+        wrong.parentNode.remove();
+
         this.minusHearts(this.i);
         this.i++;
       });
