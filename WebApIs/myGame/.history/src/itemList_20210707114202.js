@@ -3,7 +3,8 @@
 
 export default class ItemList{
   constructor(){
-    this.arrowBtn = document.querySelector('.fas.fa-arrows-alt-v');
+    this.arrowBtn = document.querySelector('.fas.fa-arrow-up');
+    this.arrowBtnDown = document.querySelector('.fas.fa-arrow-down');
     this.fishes = document.querySelectorAll('.fish');
     this.itemList = document.querySelector('.item__lists');
     this.items = document.querySelectorAll('.item');
@@ -44,4 +45,15 @@ export default class ItemList{
     })();
   }
 
+  toggleArrow(){
+    (function(){
+      if(document.querySelector('.list').innerText == 'Hide List'){
+        document.querySelector('.list').innerText = 'Show List';
+      } else if (document.querySelector('.list').innerText == 'Show List'){
+        document.querySelector('.list').innerText = 'Hide List';
+      } else {
+        document.querySelector('.list').innerText = 'Show List';
+      }
+    })();
+  }
 }

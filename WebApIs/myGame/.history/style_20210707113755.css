@@ -74,10 +74,18 @@ body {
   margin-left: 20px;
 }
 
-.fas.fa-arrows-alt-v {
+.fas.fa-arrow-up {
   font-size: 20px;
   margin: 15px;
   cursor: pointer;
+  position: absolute;
+}
+
+.fas.fa-arrow-down {
+  font-size: 20px;
+  margin: 15px;
+  cursor: pointer;
+  position: absolute;
 }
 
 .hearts {

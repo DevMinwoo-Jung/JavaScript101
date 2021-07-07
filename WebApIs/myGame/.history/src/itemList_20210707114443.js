@@ -3,7 +3,7 @@
 
 export default class ItemList{
   constructor(){
-    this.arrowBtn = document.querySelector('.fas.fa-arrows-alt-v');
+    this.arrowBtn = document.querySelector('.fas fa-arrows-alt-v');
     this.fishes = document.querySelectorAll('.fish');
     this.itemList = document.querySelector('.item__lists');
     this.items = document.querySelectorAll('.item');
