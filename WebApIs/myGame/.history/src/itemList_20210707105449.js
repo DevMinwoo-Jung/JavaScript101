@@ -19,7 +19,15 @@ export default class ItemList{
   hide(){
       this.itemList.classList.toggle('hide');
       this.hideItems();
-      this.toggleMesage();
+      (function(){
+        if(this.list == this.hideList){
+          this.list = this.showList;
+        } else if (this.list == this.hideList){
+          this.list = this.hideList;
+        } else {
+          this.list = this.showList;
+        }
+      })();
   }
 
 
@@ -30,17 +38,5 @@ export default class ItemList{
     for(let fish of this.fishes){
       fish.classList.toggle('hide');
     }
-  }
-
-  toggleMesage(){
-    (function(){
-      if(document.querySelector('.list').innerText == 'Hide List'){
-        document.querySelector('.list').innerText = 'Show List';
-      } else if (document.querySelector('.list').innerText == 'Show List'){
-        document.querySelector('.list').innerText = 'Hide List';
-      } else {
-        document.querySelector('.list').innerText = 'Show List';
-      }
-    })();
   }
 }

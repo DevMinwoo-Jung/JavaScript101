@@ -78,14 +78,12 @@ class LevelOne{
 
     if(item === ItemType.answer){
       this.updateScoreBoard();
-
       if(document.querySelectorAll('.answer').length == 0){
         this.gameOver(Reason.win);
       };
     } else if(item === ItemType.wrong){
       this.minusHearts(this.i);
       this.i++;
-
 
     }
   }
@@ -147,6 +145,24 @@ class LevelOne{
     }
   }
 
+  // checkFish(){
+  //   for(let answer of document.querySelectorAll('.answer')){
+  //     answer.addEventListener('click', () => {
+  //       answer.remove();
+  //       this.updateScoreBoard();
+  //       if(document.querySelectorAll('.answer').length == 0){
+  //         this.gameOver(Reason.win);
+  //       }
+  //     });
+  //   };
+  //   for(let wrong of document.querySelectorAll('.wrong')){
+  //     wrong.addEventListener('click', () => {
+  //       wrong.remove();
+  //       this.minusHearts(this.i);
+  //       this.i++;
+  //     });
+  //   }; 
+  // }
 
   removeFishes(){
     for(let answer of document.querySelectorAll('.answer')){

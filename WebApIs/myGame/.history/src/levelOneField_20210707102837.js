@@ -43,10 +43,12 @@ export class LvOneField{
     
     if(target.matches('.answer')){
       target.remove();
+      console.log(target);
       this.onItemClick && this.onItemClick(ItemType.answer);
     } else if(target.matches('.wrong')){
       target.remove();
       this.onItemClick && this.onItemClick(ItemType.wrong);
+      console.log(target);
     }
   }
 

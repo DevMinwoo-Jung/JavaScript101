@@ -19,7 +19,7 @@ export default class ItemList{
   hide(){
       this.itemList.classList.toggle('hide');
       this.hideItems();
-      this.toggleMesage();
+
   }
 
 

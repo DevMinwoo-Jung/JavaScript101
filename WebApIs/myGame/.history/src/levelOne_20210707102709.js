@@ -78,14 +78,14 @@ class LevelOne{
 
     if(item === ItemType.answer){
       this.updateScoreBoard();
-
+      console.log(item);
       if(document.querySelectorAll('.answer').length == 0){
         this.gameOver(Reason.win);
       };
     } else if(item === ItemType.wrong){
       this.minusHearts(this.i);
       this.i++;
-
+      console.log(item);
 
     }
   }

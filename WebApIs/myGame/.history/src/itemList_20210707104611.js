@@ -9,8 +9,6 @@ export default class ItemList{
     this.items = document.querySelectorAll('.item');
     this.itemBtn = document.querySelector('.item__btn');
     this.list = document.querySelector('.list');
-    this.hideList = 'Hide List';
-    this.showList = 'Show List';
     this.arrowBtn.addEventListener('click', () => {
       this.hide();
     })
@@ -19,9 +17,16 @@ export default class ItemList{
   hide(){
       this.itemList.classList.toggle('hide');
       this.hideItems();
-      this.toggleMesage();
+      this.toggleMessage();
   }
 
+  toggleMessage(){
+    if(this.itemList.className = 'item__lists hide'){
+      this.list.innerText = 'Show List';
+    } else if (this.itemList.className = 'item__lists') {
+      this.list.innerText = 'Hide List';
+    }
+  }
 
   hideItems(){
     for(let item of this.items){
@@ -30,17 +35,5 @@ export default class ItemList{
     for(let fish of this.fishes){
       fish.classList.toggle('hide');
     }
-  }
-
-  toggleMesage(){
-    (function(){
-      if(document.querySelector('.list').innerText == 'Hide List'){
-        document.querySelector('.list').innerText = 'Show List';
-      } else if (document.querySelector('.list').innerText == 'Show List'){
-        document.querySelector('.list').innerText = 'Hide List';
-      } else {
-        document.querySelector('.list').innerText = 'Show List';
-      }
-    })();
   }
 }

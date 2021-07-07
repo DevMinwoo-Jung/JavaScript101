@@ -219,4 +219,5 @@ body {
   height: 70px;
   position: absolute;
   z-index: 0;
+  pointer-events: none;
 }

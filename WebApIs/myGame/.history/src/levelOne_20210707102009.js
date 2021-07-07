@@ -61,7 +61,7 @@ class LevelOne{
     this.score = 0;
 
     this.field = new LvOneField(answrCount, wrongCount);
-    this.field.setClickListener(this.onItemClick);
+    this.field.setClickListener(this.checkFish());
 
     this.startGameBtn.addEventListener('click', () => {
       this.initGame();
@@ -74,21 +74,19 @@ class LevelOne{
     this.onGameStop = onGameStop;
   }
 
-  onItemClick = item =>{
+  // onItemClick = item =>{
 
-    if(item === ItemType.answer){
-      this.updateScoreBoard();
+  //   if(item === ItemType.answer){
+  //     this.updateScoreBoard();
+  //     if(document.querySelectorAll('.answer').length == 0){
+  //       this.gameOver(Reason.win);
+  //     };
+  //   } else if(item === ItemType.wrong){
+  //     this.minusHearts(this.i);
+  //     this.i++;
 
-      if(document.querySelectorAll('.answer').length == 0){
-        this.gameOver(Reason.win);
-      };
-    } else if(item === ItemType.wrong){
-      this.minusHearts(this.i);
-      this.i++;
-
-
-    }
-  }
+  //   }
+  // }
 
   initGame(){
     this.field.init();
@@ -147,6 +145,24 @@ class LevelOne{
     }
   }
 
+  checkFish = () => {
+    for(let answer of document.querySelectorAll('.answer')){
+      answer.addEventListener('click', () => {
+        answer.remove();
+        this.updateScoreBoard();
+        if(document.querySelectorAll('.answer').length == 0){
+          this.gameOver(Reason.win);
+        }
+      });
+    };
+    for(let wrong of document.querySelectorAll('.wrong')){
+      wrong.addEventListener('click', () => {
+        wrong.remove();
+        this.minusHearts(this.i);
+        this.i++;
+      });
+    }; 
+  }
 
   removeFishes(){
     for(let answer of document.querySelectorAll('.answer')){

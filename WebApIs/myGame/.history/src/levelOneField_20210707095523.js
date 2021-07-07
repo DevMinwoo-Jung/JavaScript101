@@ -47,6 +47,7 @@ export class LvOneField{
     } else if(target.matches('.wrong')){
       target.remove();
       this.onItemClick && this.onItemClick(ItemType.wrong);
+
     }
   }
 
@@ -105,7 +106,7 @@ export class LvOneField{
           [
             { transform: `translate(${newX}px, ${newY}px)`}
           ], 
-          {duration: 1000,
+          {duration: 100,
           iterations: Infinity,
           direction: 'alternate-reverse'
           });   

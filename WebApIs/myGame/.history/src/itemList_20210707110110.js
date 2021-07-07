@@ -41,6 +41,6 @@ export default class ItemList{
       } else {
         document.querySelector('.list').innerText = 'Show List';
       }
-    })();
+    }, false)();
   }
 }

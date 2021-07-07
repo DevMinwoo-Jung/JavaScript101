@@ -13,15 +13,25 @@ export default class ItemList{
     this.showList = 'Show List';
     this.arrowBtn.addEventListener('click', () => {
       this.hide();
+      this.toggleMessage();
     })
   }
 
   hide(){
       this.itemList.classList.toggle('hide');
       this.hideItems();
-      this.toggleMesage();
+
   }
 
+  toggleMessage(){
+    if(this.itemList.className = 'item__lists hide'){
+      this.list.innerText = 'Show List';
+      return;
+    } else if (this.itemList.className = 'item__lists') {
+      this.list.innerText = 'Hide List';
+      return;
+    }
+  }
 
   hideItems(){
     for(let item of this.items){
@@ -30,17 +40,5 @@ export default class ItemList{
     for(let fish of this.fishes){
       fish.classList.toggle('hide');
     }
-  }
-
-  toggleMesage(){
-    (function(){
-      if(document.querySelector('.list').innerText == 'Hide List'){
-        document.querySelector('.list').innerText = 'Show List';
-      } else if (document.querySelector('.list').innerText == 'Show List'){
-        document.querySelector('.list').innerText = 'Hide List';
-      } else {
-        document.querySelector('.list').innerText = 'Show List';
-      }
-    })();
   }
 }
