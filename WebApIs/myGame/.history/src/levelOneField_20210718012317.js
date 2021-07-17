@@ -66,7 +66,7 @@ export class LvOneField{
       const item = document.createElement('img');
       item.setAttribute('class', className);
       item.setAttribute('src', imgPath);
-      item.style.position = 'relative'
+      item.style.position = 'absolute'
       const x = randomNumber(x1, x2);
       const y = randomNumber(y1, y2);
       const fishX = randomNumber(x1, fishDivW);
@@ -121,22 +121,22 @@ export class LvOneField{
       let nh = Math.floor(Math.random() * h * 10);
       let nw = Math.floor(Math.random() * w * 10);
 
-      if(this.gameField.getBoundingClientRect().height > nh){
+      if(this.gameField.getBoundingClientRect.height < nh){
         Math.floor(Math.random() * h * 10);
-      } 
+      }
       
-      if(this.gameField.getBoundingClientRect().width > nw){
+      if(this.gameField.getBoundingClientRect.width < nw){
         Math.floor(Math.random() * w * 10);
       }
 
-     // console.log(this.gameField.getBoundingClientRect().height, this.gameField.getBoundingClientRect().width);
+      console.log(this.gameField.getBoundingClientRect.height, this.gameField.getBoundingClientRect.width);
 
       return [nh,nw];    
   }
   
   animateDiv(){
       let newq = this.makeNewPosition();
-      // let oldq = $('.a').offset();
+      // var oldq = $('.a').offset();
       // let speed = this.calcSpeed([oldq.top, oldq.left], newq);
       console.log(newq);
       // document.querySelector('.wrong').animate({transform: `translate(${newq[0]}px, ${newq[1]}px)`}, function(){
