@@ -115,22 +115,19 @@ export class LvOneField{
     makeNewPosition(){
     
       // Get viewport dimensions (remove the dimension of the div)
-      let h = this.fishDivRect.height - 50;
-      let w = this.fishDivRect.width - 50;
+      let h = this.gameField.height - 50;
+      let w = this.gameField.width - 50;
       
-      let nh = Math.floor(Math.random() * h * 10);
-      let nw = Math.floor(Math.random() * w * 10);
+      let nh = Math.floor(Math.random() * h);
+      let nw = Math.floor(Math.random() * w);
 
       if(this.gameField.getBoundingClientRect().height > nh){
-        Math.floor(Math.random() * h * 10);
+        Math.floor(Math.random() * h );
       } 
          
       if(this.gameField.getBoundingClientRect().width > nw){
-        Math.floor(Math.random() * w * 10);
+        Math.floor(Math.random() * w );
       }
-
-     // console.log(this.gameField.getBoundingClientRect().height, this.gameField.getBoundingClientRect().width);
-
       return [nh,nw];    
   }
   
@@ -143,7 +140,7 @@ export class LvOneField{
       //   this.animateDiv();        
       // });
       for(let wrong of document.querySelectorAll('.wrong')){
-        wrong.animate({transform: `translate(${newq[0]}px, ${newq[1]}px)`}, 
+        wrong.animate({top: `${newq[0]}px`, left: `${newq[1]}px)`}, 
             {duration: 1000,
             iterations: Infinity,
             direction: 'alternate-reverse'
@@ -159,23 +156,6 @@ export class LvOneField{
       //     direction: 'alternate-reverse'
       //     });   
       // }      
-
-  
-  // calcSpeed(prev, next) {
-      
-  //     var x = Math.abs(prev[1] - next[1]);
-  //     var y = Math.abs(prev[0] - next[0]);
-      
-  //     var greatest = x > y ? x : y;
-      
-  //     var speedModifier = 0.1;
-  
-  //     var speed = Math.ceil(greatest/speedModifier);
-  
-  //     return speed;
-  
-  // }
-
 
   }
 } 
