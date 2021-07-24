@@ -124,7 +124,7 @@ export class LvOneField{
       if(this.gameField.getBoundingClientRect().height > nh){
         Math.floor(Math.random() * h * 10);
       } 
-      
+         
       if(this.gameField.getBoundingClientRect().width > nw){
         Math.floor(Math.random() * w * 10);
       }
