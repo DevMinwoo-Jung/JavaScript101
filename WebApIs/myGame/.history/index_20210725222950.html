@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniGame</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<script src="src/main.js" type="module" defer></script>
+<body>
+  <section class="game__section">
+    <section class="levelOne">
+      <div class="start__btnDiv">
+        <button class="start__btn">
+          클릭해줘유~
+        </button>
+      </div>
+      <div class="levelOne__div">
+        <div class="item__btn">
+          <p class="list">Hide List</p>
+          <i class="fas fa-arrows-alt-v"></i>
+        </div> 
+        <div class="hearts">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart"></i>
+        </div> 
+        <div class="item__lists">
+          <div class="item">1.<img class="fish red " src="img/redFish.png" alt=""></div>
+          <div class="item">2.<img class="fish bigEyes " src="img/bigEyes.png" alt=""></div>
+          <div class="item">3.<img class="fish orange " src="img/orangeFish.png" alt=""></div>
+          <div class="item">4.<img class="fish red2 " src="img/redFish2.png" alt=""></div>
+          <div class="item">5.<img class="fish dirty " src="img/dirtyFish.png" alt=""></div>
+        </div>
+
+        <div class="game__field">
+          <div class="fish__div">
+          </div>
+        </div>
+        <div class="timer__box">
+          <div class="timer__bar"></div>
+        </div>
+        <div class="score__box">
+          <span class="game__score">0</span>
+        </div>
+        <div class="messageBox">
+          <p class="message"></p>
+          <p>You wanna try again?</p>
+          <i class="far fa-hand-point-down"></i>
+          <div class="retry__btn">click me!</div>
+        </div>
+      </div>
+    </section>
+  </section>
+</body>
+</html>

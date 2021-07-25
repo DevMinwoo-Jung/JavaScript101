@@ -1,6 +1,5 @@
 'use strict'
 const FISH_SIZE = 50;
-const FISH_DIV_SIZE = 70;
 
 export const ItemType = Object.freeze({
   answer: 'answer',
@@ -57,26 +56,16 @@ export class LvOneField{
     const x2 = this.fieldRect.width - FISH_SIZE;
     const y2 = this.fieldRect.height - FISH_SIZE;
 
-    const fishDivW = this.fishDivRect.width - FISH_DIV_SIZE;
-    const fishDivH = this.fishDivRect.height - FISH_DIV_SIZE;
-
     for(let i = 0; i < count ; i ++){
-      const fisiDiv = document.createElement('div');
-      fisiDiv.setAttribute('class', 'fish__div');
       const item = document.createElement('img');
       item.setAttribute('class', className);
       item.setAttribute('src', imgPath);
       item.style.position = 'relative'
       const x = randomNumber(x1, x2);
       const y = randomNumber(y1, y2);
-      const fishX = randomNumber(x1, fishDivW);
-      const fishY = randomNumber(y1, fishDivH);
-      fisiDiv.style.left = `${x}px`;
-      fisiDiv.style.top = `${y}px`;
-      item.style.left = `${fishX}px`;
-      item.style.top = `${fishY}px`;
-      this.gameField.appendChild(fisiDiv);    
-      fisiDiv.appendChild(item);   
+      item.style.left = `${x}px`;
+      item.style.top = `${y}px`;
+      this.gameField.appendChild(item);    
     }
   }
 
@@ -115,16 +104,15 @@ export class LvOneField{
     makeNewPosition(){
     
       // Get viewport dimensions (remove the dimension of the div)
-      let h = this.gameField.height - 50;
-      let w = this.gameField.width - 50;
+      let h = document.querySelector('.game__field').getBoundingClientRect().height - 50;
+      let w = document.querySelector('.game__field').getBoundingClientRect().width - 50;
       
       let nh = Math.floor(Math.random() * h);
       let nw = Math.floor(Math.random() * w);
 
       if(this.gameField.getBoundingClientRect().height > nh){
         Math.floor(Math.random() * h );
-      } 
-         
+      }  
       if(this.gameField.getBoundingClientRect().width > nw){
         Math.floor(Math.random() * w );
       }
@@ -133,15 +121,10 @@ export class LvOneField{
   
   animateDiv(){
       let newq = this.makeNewPosition();
-      // let oldq = $('.a').offset();
-      // let speed = this.calcSpeed([oldq.top, oldq.left], newq);
       console.log(newq);
-      // document.querySelector('.wrong').animate({transform: `translate(${newq[0]}px, ${newq[1]}px)`}, function(){
-      //   this.animateDiv();        
-      // });
       for(let wrong of document.querySelectorAll('.wrong')){
-        wrong.animate({top: `${newq[0]}px`, left: `${newq[1]}px)`}, 
-            {duration: 1000,
+        wrong.animate({top: `${newq[0]}px`, left: `${newq[1]}px`}, 
+            {duration: 10000,
             iterations: Infinity,
             direction: 'alternate-reverse'
             }, function() {this.animateDiv()});   
