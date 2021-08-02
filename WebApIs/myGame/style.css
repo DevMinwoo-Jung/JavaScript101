@@ -197,9 +197,10 @@ body {
 
 .game__field {
   margin-top: 300px;
-  width: 2000px;
-  height: 700px;
+  width: 1500px;
+  height: 500px;
   position: absolute;
+  background-color: aqua;
 }
 
 .answer:hover,

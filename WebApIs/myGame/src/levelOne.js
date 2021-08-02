@@ -99,7 +99,7 @@ class LevelOne{
 
   startTimer = () => {
     if(this.progressBar > 0){
-      this.field.animateDiv();
+      this.field.animateFish();
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();
