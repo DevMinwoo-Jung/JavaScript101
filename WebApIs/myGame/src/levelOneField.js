@@ -65,18 +65,11 @@ export class LvOneField{
       item.setAttribute('src', imgPath);
       const x = randomNumber(x1, x2);
       const y = randomNumber(y1, y2);
-      item.style.left = `${0}px`;
-      item.style.top = `${0}px`;
+      item.style.left = `${x}px`;
+      item.style.top = `${y}px`;
       this.gameField.appendChild(item);    
     }
   }
-
-
-  animateFish() {
-
-
-    this.fishInterval = setInterval(this.animateFishs, 3000);
-  }; 
 
     makeNewPosition(){
     
@@ -97,17 +90,39 @@ export class LvOneField{
   }
   
   animateFishs(){
-    alert("한번옴");
+    const getRandomMsRange = function(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
     for(let answer of document.querySelectorAll('.answer')){
-      let newX =  Math.floor(Math.random() * 1500);
-      let newY = Math.floor(Math.random() * 500);
+      let newX =  Math.floor(Math.random() * 500);
+      let newY = Math.floor(Math.random() * -300);
       answer.animate(
         [
           { transform: `translate(${newX}px, ${newY}px)`}
         ], 
-        {duration: 3000,
-        iterations: Infinity,
-        direction: 'normal'
+        {duration: 5000,
+        direction: "alternate-reverse",
+        easing: 'ease-in-out',
+        delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+        iterationStart: 1,
+        iterations: Infinity
+        });   
+    }
+
+    for(let wrong of document.querySelectorAll('.wrong')){
+      let newX =  Math.floor(Math.random() * 500);
+      let newY = Math.floor(Math.random() * -200);
+      wrong.animate(
+        [
+          { transform: `translate(${newX}px, ${newY}px)`}
+        ], 
+        {duration: 5000,
+        direction: "alternate-reverse",
+        easing: 'ease-in-out',
+        delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+        iterationStart: 1,
+        iterations: Infinity
         });   
     }
   }
@@ -116,3 +131,4 @@ export class LvOneField{
 function randomNumber(min, max){
   return Math.random() * (max - min) + min;
 }
+

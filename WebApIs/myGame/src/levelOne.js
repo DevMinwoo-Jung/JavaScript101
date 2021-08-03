@@ -56,10 +56,10 @@ class LevelOne{
     
 
     this.timer;
+    this.animateFishs;
     this.life = 3;
     this.i = 0;
     this.score = 0;
-
     this.field = new LvOneField(answrCount, wrongCount);
     this.field.setClickListener(this.onItemClick);
 
@@ -95,11 +95,11 @@ class LevelOne{
     this.timer = setInterval(this.startTimer, 100);
     this.timerBar.style.transition = 'all 0.2s ease-in';
     this.startGameBtn.style.visibility = 'hidden'
+    this.animateFishs =  setInterval(this.field.animateFishs(), 3000);
   }
 
   startTimer = () => {
     if(this.progressBar > 0){
-      this.field.animateFish();
       this.timerBar.style.width = this.progressBar - this.minusTimeBar +'px';
       this.progressBar = this.progressBar - this.minusTimeBar;
       this.barColorChange();

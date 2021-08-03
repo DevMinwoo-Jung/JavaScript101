@@ -156,25 +156,20 @@ body {
 
 .score__box {
   position: absolute;
-  border: solid white;
   width: 100px;
   height: 100px;
   top: 50px;
   left: 1200px;
-  background: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
   border-radius: 50%;
 }
 
 .game__score {
-  position: absolute;
-  width: 100px;
-  height: 90px;
-  background-color: black;
-  top: 6%;
-  text-align: center;
-
-  border-radius: 50%;
   color: white;
+  font-size: 30px;
+  text-align: center;
 }
 
 .messageBox {
@@ -200,7 +195,7 @@ body {
   width: 1500px;
   height: 500px;
   position: absolute;
-  background-color: aqua;
+  left: 210px;
 }
 
 .answer:hover,
