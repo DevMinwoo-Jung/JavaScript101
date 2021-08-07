@@ -12,8 +12,8 @@ const startGame = new StartGame();
 const itemList = new ItemList();
 const messageBox = new MessageBox();
 const levelOne = new LevelOneBuilder()
-.withProgressBar(450)
-.withMinusTimerBar(4.5)
+.withProgressBar(490)
+.withMinusTimerBar(4.9)
 .withAnswrCount(2)
 .withWrongCount(3)
 .build();

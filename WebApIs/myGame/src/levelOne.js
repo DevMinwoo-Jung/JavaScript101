@@ -65,7 +65,7 @@ class LevelOne{
 
     this.startGameBtn.addEventListener('click', () => {
       this.initGame();
-    });
+    }, {once: true});
 
 
   }
@@ -91,11 +91,12 @@ class LevelOne{
   }
 
   initGame(){
+    this.startGameBtn.removeEventListener('click', this.initGame, true );
+    this.startGameBtn.style.visibility = 'hidden';
     this.field.init();
     this.timer = setInterval(this.startTimer, 100);
     this.timerBar.style.transition = 'all 0.2s ease-in';
-    this.startGameBtn.style.visibility = 'hidden'
-    this.animateFishs =  setInterval(this.field.animateFishs(), 3000);
+    this.field.animateFishs();
   }
 
   startTimer = () => {
@@ -126,11 +127,11 @@ class LevelOne{
   }
 
   reset = () => {
-    this.timerBar.style.width = '450px';
+    this.timerBar.style.width = '490px';
     messageBox.messageBox.classList.remove('show');
     this.timerBar.style.backgroundColor = 'black';
     this.timerBar.style.transition = " ";
-    this.progressBar = 450;
+    this.progressBar = 490;
     this.life = 3;
     this.i = 0;
     this.refillHearts();

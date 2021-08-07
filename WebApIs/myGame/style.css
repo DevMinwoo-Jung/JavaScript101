@@ -17,15 +17,30 @@ body {
   min-width: 100px;
 }
 
+.start__btnDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .start__btn {
   position: absolute;
   bottom: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 900px;
-  right: 0;
+  margin: auto;
   text-align: center;
   z-index: 1;
+  width: 10%;
+  height: 70px;
+  background: rgb(63, 137, 197);
+  border: solid rgb(12, 92, 158) 4px;
+  border-radius: 10%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.start__btn:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
 }
 
 .start__game-mssage {
@@ -49,19 +64,55 @@ body {
 
 .item__btn {
   position: absolute;
-  border: solid white;
   display: flex;
   width: 200px;
   height: 70px;
   left: 100px;
   top: 50px;
-  background: white;
+  background: rgb(63, 137, 197);
   justify-content: space-between;
   color: black;
+  border: 0px;
+  border-radius: 50% 20% / 10% 40%;
+  border: solid rgb(12, 92, 158) 4px;
+}
+
+.fa-arrows-alt-v {
+  top: 10px;
 }
 
 .item__btn > p {
   margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.item__lists {
+  position: absolute;
+  display: block;
+  width: 200px;
+  top: 70px;
+  height: 500px;
+  background: rgb(63, 137, 197);
+  z-index: 1;
+  border-radius: 50% 20% / 10% 40%;
+  border: solid rgb(12, 92, 158) 4px;
+  color: white;
+}
+.item__lists.hide {
+  height: 0px;
+}
+
+.item {
+  position: relative;
+  font-size: 50px;
+  margin: 30px 20px 30px 20px;
+  justify-content: space-between;
+}
+
+.item.hide {
+  font-size: 0;
+  display: none;
 }
 
 .fas.fa-arrows-alt-v {
@@ -94,45 +145,17 @@ body {
   mix-blend-mode: luminosity;
 }
 
-.item__lists {
-  position: absolute;
-  border: solid white;
-  display: block;
-  width: 200px;
-  left: 100px;
-  top: 100px;
-  height: 500px;
-  background: white;
-  z-index: 1;
-}
-.item__lists.hide {
-  height: 0px;
-}
-
-.item {
-  position: relative;
-  font-size: 50px;
-  margin: 30px 20px 30px 20px;
-  justify-content: space-between;
-}
-
-.item.hide {
-  font-size: 0;
-  display: none;
-}
-
 .timer__box {
   position: absolute;
-  border: solid white;
+  border: 0px;
   display: flex;
   width: 500px;
   top: 50px;
   left: 500px;
   height: 100px;
-  background: white;
   border-radius: 18px;
-  background: white;
-  border: 2px solid;
+  background-color: rgb(63, 137, 197);
+  border: solid rgb(12, 92, 158) 4px;
 }
 
 .timer__bar {
@@ -160,15 +183,16 @@ body {
   height: 100px;
   top: 50px;
   left: 1200px;
-  border-radius: 50%;
+  border: solid rgb(12, 92, 158) 4px;
+  background-color: rgb(63, 137, 197);
   position: absolute;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .game__score {
   color: white;
-  font-size: 30px;
+  font-size: 70px;
   text-align: center;
 }
 
@@ -180,10 +204,14 @@ body {
   top: 300px;
   right: 430px;
   height: 500px;
-  background: white;
+  border: solid rgb(12, 92, 158) 4px;
+  background-color: rgb(63, 137, 197);
   text-align: center;
   font-size: 50px;
   visibility: hidden;
+  opacity: 1;
+  color: white;
+  border-radius: 10%;
 }
 
 .messageBox.show {

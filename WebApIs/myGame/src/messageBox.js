@@ -1,7 +1,7 @@
 
 
 'use strict'
-import {ItemType, LvOneField} from './levelOneField.js';
+import {LvOneField} from './levelOneField.js';
 
 export default class MessageBox{
   constructor(){
