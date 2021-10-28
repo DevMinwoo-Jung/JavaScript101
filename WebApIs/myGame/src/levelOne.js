@@ -65,7 +65,7 @@ class LevelOne{
 
     this.startGameBtn.addEventListener('click', () => {
       this.initGame();
-    }, {once: true});
+    }, {once: false});
 
 
   }

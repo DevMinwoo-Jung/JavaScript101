@@ -73,7 +73,6 @@ export class LvOneField{
 
     makeNewPosition(){
     
-      // Get viewport dimensions (remove the dimension of the div)
       let h = document.querySelector('.game__field').getBoundingClientRect().height - 50;
       let w = document.querySelector('.game__field').getBoundingClientRect().width - 50;
       
@@ -104,7 +103,7 @@ export class LvOneField{
         {duration: 5000,
         direction: "alternate-reverse",
         easing: 'ease-in-out',
-        delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+        delay: getRandomMsRange(-1000, 1000), 
         iterationStart: 1,
         iterations: Infinity
         });   
@@ -120,7 +119,7 @@ export class LvOneField{
         {duration: 5000,
         direction: "alternate-reverse",
         easing: 'ease-in-out',
-        delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+        delay: getRandomMsRange(-1000, 1000),
         iterationStart: 1,
         iterations: Infinity
         });   
